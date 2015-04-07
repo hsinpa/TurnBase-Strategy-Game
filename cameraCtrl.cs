@@ -5,7 +5,7 @@ public class cameraCtrl : MonoBehaviour {
 	public GameObject player;
 	// Use this for initialization
 	void Start () {
-		player.transform.position = new Vector2(0, 1);
+		player.transform.position = new Vector2(1, 1);
 	}
 	
 	// Update is called once per frame

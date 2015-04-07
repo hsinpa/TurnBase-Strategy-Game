@@ -7,11 +7,11 @@ public class Map : MonoBehaviour {
 	public JSONObject mapJson;
 	public GameObject prefab;
 	
-	private int height;
-	private int width;
+	public static int height;
+	public static int width;
 	
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		mapSprite = Resources.LoadAll<Sprite>("terrain");
 		TextAsset bindata= Resources.Load("map") as TextAsset;
 		mapJson = new JSONObject(bindata.ToString());
@@ -29,12 +29,13 @@ public class Map : MonoBehaviour {
 			int i = 0;
 			
 			for (int y = height; y > 0; y-- ) {
-				for (int x = 0; x < width; x++ ) {
+				for (int x = 1; x <= width; x++ ) {
 					GameObject mapMaster = Instantiate(prefab, new Vector3(x, y, -2), prefab.transform.rotation) as GameObject;
 					mapMaster.transform.parent =  mapBox.transform;
 					mapMaster.AddComponent<gridHighlight>();
 					mapMaster.GetComponent<gridHighlight>().gridPosition = new Vector2(x, y);
 					mapMaster.transform.localScale = new Vector2(0.95f, 0.95f);
+					mapMaster.name = new Vector2(x, y).ToString();
 					SpriteRenderer masterSprite = mapMaster.GetComponent<SpriteRenderer>();
 					masterSprite.sortingOrder = 5;
 
