@@ -2,31 +2,31 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class TileHightlight : MonoBehaviour {
+public class TileHighlight : MonoBehaviour {
+	public List<Vector2> finalNodeList = new List<Vector2>();
 	private int movePoint;
 	private gridHighlight[] gridSet;
-	private List<Vector2> finalNodeList = new List<Vector2>();
 	private Vector2 originTile;
-	
-	void Start() {
-		//gridSet = GameObject.Find("Map").GetComponentsInChildren<gridHighlight>();
-		findHighlight(new Vector2(1,1), 2);		
-	}
-	
+
 	public List<Vector2> findHighlight(Vector2 original, int point) {
 		List<Vector2> walkedPath = new List<Vector2>();
 		movePoint = point;
 		originTile = original;
-		findConnectNode(original);
-		highlight();
-		return null;
-	} 	
+
+		List<Vector2> nodes = findConnectNode(original);
+		highlightCtrl(nodes, false);
+		return nodes;
+	}
 	
-	private void highlight() {
-		foreach (Vector2 n in finalNodeList) {	
+	public void highlightCtrl( List<Vector2> nodes, bool isClose ) {
+		foreach (Vector2 n in nodes) {
 			if (n.x > 0 && n.x <= Map.width && n.y > 0 && n.y <= Map.height) {
-							gridHighlight masterHighlight = GameObject.Find("Map/"+n.ToString()).GetComponent<gridHighlight>();
-							masterHighlight.changeHighLight( Resources.Load<Sprite>("red"));
+				gridHighlight masterHighlight = GameObject.Find("Map/"+n.ToString()).GetComponent<gridHighlight>();
+				if (!isClose) {
+					masterHighlight.changeHighLight( Resources.Load<Sprite>("green"), 0.7f, true);
+				} else {
+					masterHighlight.changeHighLight( Resources.Load<Sprite>("white"), 0.1f, false);
+				}
 			}
 		}
 	}
