@@ -29,7 +29,6 @@ public class UserInput : MonoBehaviour {
 	void resumeIdle() {
 		userState = states.idle;
 		tileHighlight.highlightCtrl(tileHighlight.finalNodeList, true);
-		tileHighlight.finalNodeList = new List<Vector2>();
 	}
 	
 	void mouseClick(Vector2	point) {
@@ -38,7 +37,7 @@ public class UserInput : MonoBehaviour {
 			if (collide.tag == "Player") {
 				userState = states.move;
 				moveUnit = collide.transform;
-				tileHighlight.findHighlight(collide.transform.position, 2);
+				tileHighlight.findHighlight(collide.transform.position, 4);
 			}
 
 			if (collide.tag == "Ground" && collide.GetComponent<gridHighlight>().canMove && userState == states.move) {
