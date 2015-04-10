@@ -28,22 +28,23 @@ public class UserInput : MonoBehaviour {
 
 	void resumeIdle() {
 		userState = states.idle;
-		tileHighlight.highlightCtrl(tileHighlight.finalNodeList, true);
+		tileHighlight.highlightCtrl(tileHighlight.previousNodeList, true);
 	}
 	
 	void mouseClick(Vector2	point) {
 	  Collider2D[] collides =	Physics2D.OverlapPointAll(point);
 		foreach (Collider2D collide in collides) {
+			if (collide.tag == "GroundMove" && collide.GetComponent<gridHighlight>().canMove && userState == states.move) {
+				unitMove(moveUnit, collide.transform.position);
+				resumeIdle();
+			}
+
 			if (collide.tag == "Player") {
 				userState = states.move;
 				moveUnit = collide.transform;
 				tileHighlight.findHighlight(collide.transform.position, 4);
 			}
 
-			if (collide.tag == "Ground" && collide.GetComponent<gridHighlight>().canMove && userState == states.move) {
-				unitMove(moveUnit, collide.transform.position);
-				resumeIdle();
-			}
 		}
 	}
 }

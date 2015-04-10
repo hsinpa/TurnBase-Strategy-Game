@@ -7,8 +7,9 @@ public class Map : MonoBehaviour {
 	public JSONObject mapJson;
 	public GameObject prefab;
 	
-	public static int height;
-	public static int width;
+	public int height;
+	public int width;
+	public Dictionary<Vector2, gridHighlight> mapGrid = new Dictionary<Vector2, gridHighlight>();
 	
 	// Use this for initialization
 	void Awake () {
@@ -32,8 +33,10 @@ public class Map : MonoBehaviour {
 				for (int x = 1; x <= width; x++ ) {
 					GameObject mapMaster = Instantiate(prefab, new Vector3(x, y, 0), prefab.transform.rotation) as GameObject;
 					mapMaster.transform.parent =  mapBox.transform;
-					mapMaster.AddComponent<gridHighlight>();
-					mapMaster.GetComponent<gridHighlight>().gridPosition = new Vector2(x, y);
+					gridHighlight gridScript = mapMaster.AddComponent<gridHighlight>();
+					gridScript.gridPosition = new Vector2(x, y);
+					mapGrid.Add(gridScript.gridPosition, gridScript);
+
 					mapMaster.GetComponent<BoxCollider2D>().enabled = true;
 					mapMaster.transform.localScale = new Vector2(0.95f, 0.95f);
 					mapMaster.name = new Vector2(x, y).ToString();
