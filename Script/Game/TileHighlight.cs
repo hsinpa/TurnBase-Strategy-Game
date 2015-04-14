@@ -7,6 +7,8 @@ public class TileHighlight : MonoBehaviour {
 	private gridHighlight[] gridSet;
 	private Vector2 originTile;
 	private Map map;
+	private int unitLayer = 1 << 8;
+
 
 	void Start() {
 		map = GetComponent<Map>();
@@ -31,6 +33,10 @@ public class TileHighlight : MonoBehaviour {
 			}
 		}
 	}
+
+	public bool isUnitRestrict(Vector2 point) {
+		return (Physics2D.OverlapPoint(point, unitLayer)) ? true : false;
+	}
 	
 	private List<gridHighlight> findConnectNode(Vector2 node, List<gridHighlight> nodeStorage, float movePoint) {
 		movePoint -= map.mapGrid[node].cost;
@@ -47,13 +53,13 @@ public class TileHighlight : MonoBehaviour {
 			for (int i = 0; i < tempNodeList.Count; i++) {
 					Vector2 n = tempNodeList[i];
 
-				if (!map.mapGrid.ContainsKey(n) || nodeStorage.Contains(map.mapGrid[n]) || n == originTile) {
+				if (!map.mapGrid.ContainsKey(n) || nodeStorage.Contains(map.mapGrid[n])) {
 					tempNodeList2.Remove(n);
 					}
 				}
 
 			foreach (Vector2 k in tempNodeList2) {
-				if (map.mapGrid.ContainsKey(k) && k != originTile) {
+				if (map.mapGrid.ContainsKey(k) && k != originTile && !isUnitRestrict(k) ) {
 					nodeStorage.Add(map.mapGrid[k]);
 					findConnectNode(k, nodeStorage, movePoint);
 				}

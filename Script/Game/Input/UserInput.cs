@@ -24,6 +24,8 @@ public class UserInput : MonoBehaviour {
 
 	void unitMove(Transform unit, Vector3 pos) {
 		unit.position = pos;
+		Unit unitScript = unit.GetComponent<Unit>();
+		unitScript.status = 1;
 	}
 
 	void resumeIdle() {
@@ -39,7 +41,7 @@ public class UserInput : MonoBehaviour {
 				resumeIdle();
 			}
 
-			if (collide.tag == "Player") {
+			if (collide.tag == "Player" && collide.GetComponent<Unit>().status == 0) {
 				userState = states.move;
 				moveUnit = collide.transform;
 				tileHighlight.findHighlight(collide.transform.position, 4);
