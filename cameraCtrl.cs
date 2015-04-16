@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class cameraCtrl : MonoBehaviour {
-	public float moveSensitivityX = 1f;
-	public float moveSensitivityY = 1f;
+	private float moveSensitivityX = 1.5f;
+	private float moveSensitivityY = 1.5f;
 	public bool updateZoomSensitivity = true;
 	public float orthoZoomSpeed = 0.05f;
-	public float minZoom = 1.0f;
-	public float maxZoom = 20.0f;
+	private float minZoom = 3.0f;
+	private float maxZoom = 5.0f;
 	public bool invertMoveX = false;
 	public bool invertMoveY = false;
 
@@ -41,7 +41,7 @@ public class cameraCtrl : MonoBehaviour {
 			}
 		}
 		//Zoom
-		if (touches.Length == 2) {
+		if (touches.Length == 2  ) {
 			Touch touchOne = touches[0];
 			Touch touchTwo = touches[1];
 

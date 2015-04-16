@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public class TileHighlight : MonoBehaviour {
 	public List<gridHighlight> previousNodeList = new List<gridHighlight>();
+	public Vector2 originTile;
+
 	private gridHighlight[] gridSet;
-	private Vector2 originTile;
 	private Map map;
 	private int unitLayer = 1 << 8;
 
@@ -35,9 +36,23 @@ public class TileHighlight : MonoBehaviour {
 	}
 
 	public bool isUnitRestrict(Vector2 point) {
-		return (Physics2D.OverlapPoint(point, unitLayer)) ? true : false;
+		Collider2D collide = Physics2D.OverlapPoint(point, unitLayer);
+		if (collide && collide.tag == "Enemy") {
+			return true;
+		}
+		return false;
 	}
-	
+
+	public void showAttackGrid(List<Vector2> nodes) {
+		highlightCtrl( previousNodeList, true );
+		foreach (Vector2 k in nodes) {
+			if (map.mapGrid.ContainsKey(k) && isUnitRestrict(k) ) {
+				map.mapGrid[k].changeHighLight( Resources.Load<Sprite>("red"), 0.5f, false);
+				previousNodeList.Add(map.mapGrid[k]);
+			}
+		}
+	}
+
 	private List<gridHighlight> findConnectNode(Vector2 node, List<gridHighlight> nodeStorage, float movePoint) {
 		movePoint -= map.mapGrid[node].cost;
 

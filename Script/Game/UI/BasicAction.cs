@@ -10,8 +10,10 @@ public class BasicAction : MonoBehaviour {
 		
 	public void nextTurn() {
 		foreach (Unit unit in gameManager.unitSet ) {
-			if (unit.tag == "Player")
+			if (unit.tag == "Player") {
 				unit.status = 0;
+				unit.GetComponent<SpriteRenderer>().color= Color.white;
+			}
 		}
 	}
 }
