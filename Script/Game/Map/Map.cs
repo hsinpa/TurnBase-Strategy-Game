@@ -7,8 +7,8 @@ public class Map : MonoBehaviour {
 	public JSONObject mapJson;
 	public GameObject prefab;
 	
-	public int height;
-	public int width;
+	public static int height;
+	public static int width;
 	public Dictionary<Vector2, gridHighlight> mapGrid = new Dictionary<Vector2, gridHighlight>();
 	
 	// Use this for initialization

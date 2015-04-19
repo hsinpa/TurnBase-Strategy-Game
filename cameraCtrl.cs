@@ -7,7 +7,7 @@ public class cameraCtrl : MonoBehaviour {
 	public bool updateZoomSensitivity = true;
 	public float orthoZoomSpeed = 0.05f;
 	private float minZoom = 3.0f;
-	private float maxZoom = 5.0f;
+	private float maxZoom = 6.0f;
 	public bool invertMoveX = false;
 	public bool invertMoveY = false;
 
@@ -38,8 +38,11 @@ public class cameraCtrl : MonoBehaviour {
 				positionY = invertMoveY ? positionY : positionY * -1;
 
 				_camera.transform.position += new Vector3(positionX, positionY, 0);
+				_camera.transform.position = new Vector2(Mathf.Clamp( _camera.transform.position.x, 0, Map.width),
+				                                         Mathf.Clamp( _camera.transform.position.y, 0, Map.height));
 			}
 		}
+		
 		//Zoom
 		if (touches.Length == 2  ) {
 			Touch touchOne = touches[0];
