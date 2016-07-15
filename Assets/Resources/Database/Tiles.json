@@ -1,0 +1,14 @@
+{
+  "Forest" : {
+    "cost" : 1.5
+  },
+  "Base" : {
+    "cost" : 1
+  },
+  "Castle" : {
+    "cost" : 1
+  },
+  "Barrier" : {
+    "cost" : -1
+  }
+}
