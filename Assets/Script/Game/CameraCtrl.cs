@@ -5,8 +5,8 @@ using Lean;
 using DG.Tweening;
 
 public class CameraCtrl : MonoBehaviour {
-	private float moveSensitivityX = 1.5f;
-	private float moveSensitivityY = 1.5f;
+//	private float moveSensitivityX = 1.5f;
+//	private float moveSensitivityY = 1.5f;
 	public bool updateZoomSensitivity = true;
 	public float orthoZoomSpeed = 0.05f;
 	private float minZoom = 3.0f;
@@ -29,7 +29,6 @@ public class CameraCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Touch[] touches = Input.touches;
 
 		if ( followSwitch ) {
 			_camera.transform.position = new Vector3( mFollowUnit.transform.position.x, mFollowUnit.transform.position.y, _camera.transform.position.z);

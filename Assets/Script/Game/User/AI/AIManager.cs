@@ -18,7 +18,7 @@ namespace Player {
 						
 		        yield return new WaitForSeconds(1);
 				camera.StopFollowing();
-				gm.map.gridManager.highlightCtrl(gm.map.grids, true);
+				gm.map.gridManager.ResetGrid(gm.map.grids);
 			}
 
 			gm.EndTurn();

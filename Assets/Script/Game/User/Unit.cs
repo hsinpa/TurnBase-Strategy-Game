@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using Player;
 using Utility;
+using DG.Tweening;
+using System.Threading;
 
 [System.Serializable]
 public class Unit : MonoBehaviour {
@@ -17,7 +18,6 @@ public class Unit : MonoBehaviour {
 			return mHP;
 		}
 		set {
-			Debug.Log(value);
 			if (value <= 0 ) {
 				Dead();
 			}
@@ -71,19 +71,20 @@ public class Unit : MonoBehaviour {
 
 	public void Set(User p_user) {
 		parent = p_user;
+
 	}
+
 
 	public void Move(Vector3[] _path, System.Action callback=null) {
 		float time = _path.Length * 0.1f;
-		transform.DOPath(_path, time, PathType.Linear, PathMode.TopDown2D).SetEase(Ease.Linear).OnComplete(delegate() {
-			Debug.Log("On Land");
-			if (callback != null) callback();
+		transform.DOPath(_path, time, PathType.Linear).SetEase(Ease.Flash).OnComplete(delegate() {
+			if (callback != null) callback();			
 		});
 	}
 
 	public void Attack(Unit p_unit, GridHolder p_terrain) {
 		AttackFormula formula = new AttackFormula(currentWeapon, p_terrain, this, p_unit);
-		Debug.Log("Demaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy);
+		Debug.Log("Damaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy);
 		if (!UtilityMethod.PercentageGame(formula.accuracy)) {
 			p_unit.hp = p_unit.hp - formula.GetDamage();
 		}

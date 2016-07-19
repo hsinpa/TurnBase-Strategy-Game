@@ -51,7 +51,6 @@ public class Map : MonoBehaviour {
 	}
 
 	public void DrawLayer( JSONObject layer, GameObject gameBoard, GameObject prefab, Vector2 pos, int imageIndex, int orderIndex ) {
-		JSONObject tileJSON = new JSONObject(Resources.Load<TextAsset>("Database/Tiles").text);
 		string layerTitle = layer.GetField("name").str;
 					GridHolder gridScript = FindTileByPos(pos);
 					GameObject mapMaster;

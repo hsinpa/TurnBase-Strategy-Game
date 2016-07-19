@@ -16,7 +16,10 @@ public class GameUIHandler : MonoBehaviour {
 
 
 	public void AttackClick() {
-		gameManager.map.gridManager.showAttackGrid( gameManager.inputManager.moveUnit.GetComponent<Unit>());
+		gameManager.map.gridManager.ResetGrid(gameManager.map.grids);
+
+		gameManager.map.gridManager.FindAttackGrid( gameManager.inputManager.moveUnit.GetComponent<Unit>());
+
 		gameManager.inputManager.inputState = InputManager.States.Attack;
 	}
 

@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour {
 		gameManager = GameObject.Find("game").GetComponent<GameManager>();
 
 		_Map = gameManager.map;
+		Debug.Log(DOTween.defaultEaseType);
 
 		gameUI = GameObject.Find("ui").GetComponentInChildren<GameUIHandler>();
 	}
@@ -33,7 +34,8 @@ public class InputManager : MonoBehaviour {
 
 	public void FreePanel() {
 		inputState = InputManager.States.Idle;
-		_Map.gridManager.highlightCtrl(_Map.grids, true);
+		_Map.gridManager.ResetGrid(_Map.grids);
+
 		gameUI.actionMenu.SetBool("isOpen", false);
 	}
 
@@ -41,7 +43,7 @@ public class InputManager : MonoBehaviour {
 			Vector3 mouseposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
 			Collider2D collide = Physics2D.OverlapPoint(new Vector2(mouseposition.x, mouseposition.y));
 				
-			if (collide == null || collide.tag != "GroundMove" ) return;
+			if (collide == null || collide.tag != "Ground" || collide.GetComponent<GridHolder>().gridStatus != GridHolder.Status.Move ) return;
 
 			List<Tile> tiles = FindPath(moveUnit.transform.position, collide.transform.position);
 			recordTile = tiles;
@@ -58,7 +60,12 @@ public class InputManager : MonoBehaviour {
 	}
 
 	public void MoveUnit( Unit p_moveunit,  List<Tile> tiles, System.Action callback = null) {
-		if (tiles.Count <= 0) return;
+		if (tiles.Count <= 0) {
+			_Map.gridManager.DrawPathLine(new List<Vector2>());
+			if (callback != null) callback();
+			return;
+		} 
+
 		Vector3[] path = tiles.ConvertAll<Vector3>(x => x.position).ToArray();
 
 		p_moveunit.Move(path, delegate() {
@@ -96,7 +103,6 @@ public class InputManager : MonoBehaviour {
 		if (collides == null || collides.Count <= 0) return; 
 		Collider2D mCollide = collides[0];
 
-		Debug.Log(mCollide.tag);
 
 		switch (inputState) {
 			case States.Idle :
@@ -109,12 +115,25 @@ public class InputManager : MonoBehaviour {
 			break;
 
 			case States.Move :
-				if (mCollide.tag == "GroundMove" && mCollide.GetComponent<GridHolder>().canMove) {
+				if (mCollide.tag == "Ground") {
+					//Normal Grid
+					if (mCollide.GetComponent<GridHolder>().gridStatus == GridHolder.Status.Move) {
+						inputState = States.WaitForAction;
+						MoveUnit(moveUnit, recordTile);
+						gameUI.actionMenu.SetBool("isOpen", true);
+					}
+				} else if (mCollide.tag == "Enemy" && collides[1].GetComponent<GridHolder>().gridStatus == GridHolder.Status.Attack) {
+					Unit target = mCollide.GetComponent<Unit>();
+					GridHolder gridHolder = _Map.FindTileByPos(target.unitPos);
+					List<Tile> tiles = FindPath(moveUnit.transform.position, gridHolder.attackPos);
+//					Debug.Log("Attack MOve");
 					inputState = States.WaitForAction;
-					MoveUnit(moveUnit, recordTile);
-					gameUI.actionMenu.SetBool("isOpen", true);
+					MoveUnit(moveUnit, tiles, delegate() {
+						moveUnit.Attack( target, gridHolder);
+						moveUnit.status = Unit.Status.Rest;
+						FreePanel();						
+					});
 				}
-
 			break;
 
 			case States.Attack :

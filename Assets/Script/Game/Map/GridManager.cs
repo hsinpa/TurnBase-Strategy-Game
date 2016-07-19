@@ -9,7 +9,6 @@ public class GridManager : MonoBehaviour {
 	public Vector2 originTile;
 
 	private Map map { get { return GetComponent<Map>(); } }
-	public int unitLayer = 1 << 8;
 	public APath aPathFinding;
 
 	public void Prepare() {
@@ -19,22 +18,18 @@ public class GridManager : MonoBehaviour {
 	public List<GridHolder> FindPossibleRoute(Unit p_unit, Player.User enemy) {
 		originTile = p_unit.unitPos;
 
-		List<GridHolder> nodes = findConnectNode(p_unit, enemy.allUnits, p_unit.currentWeapon );
+		List<GridHolder> nodes = findConnectNode(p_unit, enemy.allUnits );
+		List<GridHolder> attackNode = FindNodeWithWeaponRange( nodes, p_unit );
+
 		availableGridList = nodes;
-		highlightCtrl(nodes, false);
+		ShowAttackGrid(attackNode);
 		return nodes;
 	}
 
-	public void highlightCtrl( List<GridHolder> nodes, bool isClose ) {
-		foreach (GridHolder n in nodes) {
-			if (!isClose) {
-				n.tag = "GroundMove";
-				n.changeHighLight( Resources.Load<Sprite>("green"), 0.7f, true);
-			} else {
-				n.tag = "GroundIdle";
-				n.changeHighLight( Resources.Load<Sprite>("white"), 0.1f, false);
-			}
-		}
+	public void ResetGrid(List<GridHolder> nodes) {
+		nodes.ForEach(delegate(GridHolder obj) {
+			obj.gridStatus = GridHolder.Status.Idle;
+		});
 	}
 
 	public void DrawPathLine(List<Vector2> pathList) {
@@ -55,28 +50,34 @@ public class GridManager : MonoBehaviour {
 	}
 
 	public bool isUnitRestrict(Vector2 point) {
-		Collider2D collide = Physics2D.OverlapPoint(point, unitLayer);
+		Collider2D collide = Physics2D.OverlapPoint(point, GeneralSetting.unitLayer);
 		if (collide && collide.tag == "Enemy") {
 			return true;
 		}
 		return false;
 	}
 
-	public void showAttackGrid(Unit unit) {
-		List<Vector2> canAttackGrid = new List<Vector2>();
+	public void FindAttackGrid(Unit unit) {
+		List<GridHolder> canAttackGrid = new List<GridHolder>();
 
 		unit.currentWeapon.GetAttackPoint(unit.transform.position).ForEach(delegate(Vector2 obj) {
-			if (map.grids.FindAll(x => x.gridPosition == obj).Count > 0) canAttackGrid.Add(obj);
+			if (map.grids.FindAll(x => x.gridPosition == obj).Count > 0) {
+				GridHolder grid = map.FindTileByPos(obj);
+				grid.gridStatus = GridHolder.Status.Attack;
+				canAttackGrid.Add( grid );
+			}
 		});
+	}
 
-		foreach (Vector2 k in canAttackGrid) {
-			GridHolder gridHolder = map.FindTileByPos(k);
-			gridHolder.changeHighLight( Resources.Load<Sprite>("red"), 0.7f, true);
+	public void ShowAttackGrid(List<GridHolder> p_grid ) {
+		foreach (GridHolder k in p_grid) {
+			k.gridStatus = GridHolder.Status.Attack;
 		}
 	}
 
+
 	//Find Walkable Node
-	private List<GridHolder> findConnectNode(Unit mUnits, List<Unit> allUnits, Weapon p_weapon) {
+	private List<GridHolder> findConnectNode(Unit mUnits, List<Unit> allUnits) {
 		List<GridHolder> closeNode  = new List<GridHolder>();
 		List<Vector2> openNode  = new List<Vector2>();
 
@@ -108,6 +109,7 @@ public class GridManager : MonoBehaviour {
 			}
 
 			openNode.Remove(node);
+			currentGrid.gridStatus = GridHolder.Status.Move;
 			closeNode.Add(currentGrid);
 		}
 		return closeNode;
@@ -132,6 +134,39 @@ public class GridManager : MonoBehaviour {
 				}
 			}
 		return tempNodeList2;
+	}
+
+
+	public List<GridHolder> FindNodeWithWeaponRange(List<GridHolder> p_originalGrid, Unit p_unit) {
+		List<GridHolder> AttackGrid = new List<GridHolder>();
+		int UT_layer = GeneralSetting.unitLayer;
+
+
+		foreach (GridHolder grid in p_originalGrid) {
+			List<Vector2> p_attackPoint = p_unit.currentWeapon.GetAttackPoint( grid.gridPosition );
+			//Check the attack standing point won't overlap with others
+			Collider2D collides = Physics2D.OverlapPoint(grid.gridPosition, UT_layer);
+
+			foreach (Vector2 point in p_attackPoint ) {
+				GridHolder refilterN = map.FindTileByPos(point);
+
+				//Check findNode and attackNodeStorage won't repeat
+				if (p_originalGrid.Count(x=> x.gridPosition == point) <= 0 && 
+					AttackGrid.Count(x=> x.gridPosition == point) <= 0 &&
+					//Unit overlap
+					(collides == null || collides.transform.position == p_unit.transform.position ) &&
+					//Grid Valid
+					map.grids.Contains( refilterN )) {
+
+					refilterN.attackPos = grid.gridPosition;
+					AttackGrid.Add( refilterN );
+							
+				}
+
+			}
+		}
+
+		return AttackGrid;
 	}
 
 }
