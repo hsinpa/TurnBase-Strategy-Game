@@ -8,25 +8,33 @@ namespace Player {
 		
 		public IEnumerator Think() {
 			CameraCtrl camera = Camera.main.GetComponent<CameraCtrl>();
+				foreach (Unit unit in allUnits) {
+					if (gm.player.allUnits.Count <= 0) break;
 
-			foreach (Unit unit in allUnits) {
-				GridHolder bestMoveToGrid = mAIPattern.FindBestAttackRoute(unit);
+					camera.StartFollowing(unit);
+					GridHolder bestMoveToGrid = mAIPattern.FindBestAttackRoute(unit);
 
+					//Move
+					gm.inputManager.MoveUnit( unit, gm.inputManager.FindPath(unit.transform.position, bestMoveToGrid.gridPosition));
 
-				camera.StartFollowing(unit);
-				gm.inputManager.MoveUnit( unit, gm.inputManager.FindPath(unit.transform.position, bestMoveToGrid.gridPosition));
-						
-		        yield return new WaitForSeconds(1);
-				camera.StopFollowing();
-				gm.map.gridManager.ResetGrid(gm.map.grids);
-			}
+			        //React
+					yield return StartCoroutine(PerformAction( unit ));
 
+					camera.StopFollowing();
+					gm.map.gridManager.ResetGrid(gm.map.grids);
+				}
 			gm.EndTurn();
 		}
 
 
 
-		public void PerformAction() {
+		IEnumerator PerformAction(Unit p_unit) {
+			yield return new WaitForSeconds(0.5f);
+
+			//Attack
+			Unit p_target = mAIPattern.FindBestAttackTarget(p_unit, gm.player.allUnits);
+			yield return new WaitForSeconds(0.2f);
+
 			
 		}
 

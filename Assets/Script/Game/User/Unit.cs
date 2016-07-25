@@ -84,7 +84,7 @@ public class Unit : MonoBehaviour {
 
 	public void Attack(Unit p_unit, GridHolder p_terrain) {
 		AttackFormula formula = new AttackFormula(currentWeapon, p_terrain, this, p_unit);
-		Debug.Log("Damaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy);
+		Debug.Log("Damaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy + " Target " +p_unit.name);
 		if (!UtilityMethod.PercentageGame(formula.accuracy)) {
 			p_unit.hp = p_unit.hp - formula.GetDamage();
 		}
