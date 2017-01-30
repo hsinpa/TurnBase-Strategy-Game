@@ -11,13 +11,12 @@ public class CharacterWindow : EditorWindow {
 	private string mBase_path = "Assets/Asset/Prefab/Unit/";
 	private CharacterListPrefab mCharacterInventory;
 
-
 	[MenuItem ("Window/Customize/Character")]
 	static void Init () {
-			
 		// Get existing open window or if none, make a new one:
 		CharacterWindow window = (CharacterWindow)EditorWindow.GetWindow (typeof (CharacterWindow), false, "Character");
-		window.minSize = new Vector2( 40 ,30);
+		//window.minSize = new Vector2( 0 ,30);
+
 		window.Show();
 	}
 
@@ -39,7 +38,7 @@ public class CharacterWindow : EditorWindow {
 		int itemCount = mCharacterInventory.characterList.Count, maxRow = (Mathf.CeilToInt( itemCount / mRowLimit ) );
 		float maxHeight = ((maxRow + 2) * mSpace) + (boxSize.y * (maxRow + 2));
 
-		scrollPosition = GUI.BeginScrollView(new Rect(mSpace, mSpace, mWidth, mWidth), scrollPosition, new Rect(0, 0, mWidth-20, maxHeight));
+		scrollPosition = GUI.BeginScrollView(new Rect(mSpace, mSpace, position.width, position.height), scrollPosition, new Rect(0, 0, mWidth-20, maxHeight));
 		for (int i = 0; i < itemCount; i++) {
 			CreateBoxInfo(i, mCharacterInventory.characterList[i]);
 		}
@@ -51,9 +50,6 @@ public class CharacterWindow : EditorWindow {
 			foreach (CharacterPrefab ch_prefab in mCharacterInventory.characterList) EditorUtility.SetDirty(ch_prefab);
         }
 	}
-
-
-
 
 	// ================================= GUI Method ==============================
 	private void CreateBoxInfo(int p_index, CharacterPrefab p_prefab) {
@@ -73,6 +69,12 @@ public class CharacterWindow : EditorWindow {
 		//Image
 		Sprite p_sprite = (p_prefab._image == null) ? AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UISprite.psd") : p_prefab._image;
 
+
+		Rect tr = p_sprite.textureRect;
+		Rect r = new Rect(tr.x / p_sprite.textureRect.width, tr.y / p_sprite.textureRect.height,
+						 tr.width / p_sprite.textureRect.width, tr.height / p_sprite.textureRect.height );
+
+	//		GUI.DrawTextureWithTexCoords(new Rect( new_position.x + 5, new_position.y+45, tr.width,tr.height), p_sprite.texture, r, true);
 		GUI.DrawTexture(new Rect( new_position.x + 5, new_position.y+45, 60, 60),
 						p_sprite.texture, ScaleMode.StretchToFill, true, 10.0F);
 
