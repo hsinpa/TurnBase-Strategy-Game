@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="6" height="8" tilewidth="16" tileheight="16" nextobjectid="1">
+ <properties>
+  <property name="cost" type="int" value="0"/>
+ </properties>
+ <tileset firstgid="1" name="terrain" tilewidth="16" tileheight="16" spacing="16" margin="16" tilecount="1024" columns="32">
+  <image source="../../terrain.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="1025" name="tileSet" tilewidth="16" tileheight="16" tilecount="364" columns="7">
+  <image source="../../tileSet.png" width="112" height="832"/>
+ </tileset>
+ <layer name="Base" width="6" height="8">
+  <data encoding="csv">
+1025,1025,1025,1025,1025,1025,
+1025,1025,1025,1025,1025,1025,
+1025,1025,1025,1025,1025,1025,
+1025,1025,1028,1025,1025,1025,
+1025,1025,1025,1025,1025,1025,
+1025,1025,1025,1028,1025,1025,
+1025,1025,1025,1025,1025,1025,
+1025,1025,1025,1025,1025,1025
+</data>
+ </layer>
+ <layer name="Castle" width="6" height="8">
+  <properties>
+   <property name="cost" type="int" value="0"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,1059,0,0,1059,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Obstacle" width="6" height="8">
+  <properties>
+   <property name="cost" type="int" value="0"/>
+  </properties>
+  <data encoding="csv">
+1038,1038,0,0,0,0,
+1038,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,1244,1245,1245,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Forest" width="6" height="8">
+  <properties>
+   <property name="cost" type="int" value="0"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+1030,1030,0,0,0,0,
+1030,1030,0,0,0,0,
+0,1030,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

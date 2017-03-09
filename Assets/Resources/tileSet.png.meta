@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e036bf4da4b9043258479ee1560be3a8
-timeCreated: 1467215034
-licenseType: Free
+timeCreated: 1488383365
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_0
@@ -301,9 +301,9 @@ TextureImporter:
     21300588: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_294
     21300590: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_295
     21300592: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_296
-    21300594: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_297
-    21300596: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_298
-    21300598: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_299
+    21300594: enemy-target-holder
+    21300596: player-target-holder
+    21300598: ally-target-holder
     21300600: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_300
     21300602: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_301
     21300604: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_302
@@ -368,6 +368,370 @@ TextureImporter:
     21300722: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_361
     21300724: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_362
     21300726: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_363
+    21300728: tileSet_0
+    21300730: tileSet_1
+    21300732: tileSet_2
+    21300734: tileSet_3
+    21300736: tileSet_4
+    21300738: tileSet_5
+    21300740: tileSet_6
+    21300742: tileSet_7
+    21300744: tileSet_8
+    21300746: tileSet_9
+    21300748: tileSet_10
+    21300750: tileSet_11
+    21300752: tileSet_12
+    21300754: tileSet_13
+    21300756: tileSet_14
+    21300758: tileSet_15
+    21300760: tileSet_16
+    21300762: tileSet_17
+    21300764: tileSet_18
+    21300766: tileSet_19
+    21300768: tileSet_20
+    21300770: tileSet_21
+    21300772: tileSet_22
+    21300774: tileSet_23
+    21300776: tileSet_24
+    21300778: tileSet_25
+    21300780: tileSet_26
+    21300782: tileSet_27
+    21300784: tileSet_28
+    21300786: tileSet_29
+    21300788: tileSet_30
+    21300790: tileSet_31
+    21300792: tileSet_32
+    21300794: tileSet_33
+    21300796: tileSet_34
+    21300798: tileSet_35
+    21300800: tileSet_36
+    21300802: tileSet_37
+    21300804: tileSet_38
+    21300806: tileSet_39
+    21300808: tileSet_40
+    21300810: tileSet_41
+    21300812: tileSet_42
+    21300814: tileSet_43
+    21300816: tileSet_44
+    21300818: tileSet_45
+    21300820: tileSet_46
+    21300822: tileSet_47
+    21300824: tileSet_48
+    21300826: tileSet_49
+    21300828: tileSet_50
+    21300830: tileSet_51
+    21300832: tileSet_52
+    21300834: tileSet_53
+    21300836: tileSet_54
+    21300838: tileSet_55
+    21300840: tileSet_56
+    21300842: tileSet_57
+    21300844: tileSet_58
+    21300846: tileSet_59
+    21300848: tileSet_60
+    21300850: tileSet_61
+    21300852: tileSet_62
+    21300854: tileSet_63
+    21300856: tileSet_64
+    21300858: tileSet_65
+    21300860: tileSet_66
+    21300862: tileSet_67
+    21300864: tileSet_68
+    21300866: tileSet_69
+    21300868: tileSet_70
+    21300870: tileSet_71
+    21300872: tileSet_72
+    21300874: tileSet_73
+    21300876: tileSet_74
+    21300878: tileSet_75
+    21300880: tileSet_76
+    21300882: tileSet_77
+    21300884: tileSet_78
+    21300886: tileSet_79
+    21300888: tileSet_80
+    21300890: tileSet_81
+    21300892: tileSet_82
+    21300894: tileSet_83
+    21300896: tileSet_84
+    21300898: tileSet_85
+    21300900: tileSet_86
+    21300902: tileSet_87
+    21300904: tileSet_88
+    21300906: tileSet_89
+    21300908: tileSet_90
+    21300910: tileSet_91
+    21300912: tileSet_92
+    21300914: tileSet_93
+    21300916: tileSet_94
+    21300918: tileSet_95
+    21300920: tileSet_96
+    21300922: tileSet_97
+    21300924: tileSet_98
+    21300926: tileSet_99
+    21300928: tileSet_100
+    21300930: tileSet_101
+    21300932: tileSet_102
+    21300934: tileSet_103
+    21300936: tileSet_104
+    21300938: tileSet_105
+    21300940: tileSet_106
+    21300942: tileSet_107
+    21300944: tileSet_108
+    21300946: tileSet_109
+    21300948: tileSet_110
+    21300950: tileSet_111
+    21300952: tileSet_112
+    21300954: tileSet_113
+    21300956: tileSet_114
+    21300958: tileSet_115
+    21300960: tileSet_116
+    21300962: tileSet_117
+    21300964: tileSet_118
+    21300966: tileSet_119
+    21300968: tileSet_120
+    21300970: tileSet_121
+    21300972: tileSet_122
+    21300974: tileSet_123
+    21300976: tileSet_124
+    21300978: tileSet_125
+    21300980: tileSet_126
+    21300982: tileSet_127
+    21300984: tileSet_128
+    21300986: tileSet_129
+    21300988: tileSet_130
+    21300990: tileSet_131
+    21300992: tileSet_132
+    21300994: tileSet_133
+    21300996: tileSet_134
+    21300998: tileSet_135
+    21301000: tileSet_136
+    21301002: tileSet_137
+    21301004: tileSet_138
+    21301006: tileSet_139
+    21301008: tileSet_140
+    21301010: tileSet_141
+    21301012: tileSet_142
+    21301014: tileSet_143
+    21301016: tileSet_144
+    21301018: tileSet_145
+    21301020: tileSet_146
+    21301022: tileSet_147
+    21301024: tileSet_148
+    21301026: tileSet_149
+    21301028: tileSet_150
+    21301030: tileSet_151
+    21301032: tileSet_152
+    21301034: tileSet_153
+    21301036: tileSet_154
+    21301038: tileSet_155
+    21301040: tileSet_156
+    21301042: tileSet_157
+    21301044: tileSet_158
+    21301046: tileSet_159
+    21301048: tileSet_160
+    21301050: tileSet_161
+    21301052: tileSet_162
+    21301054: tileSet_163
+    21301056: tileSet_164
+    21301058: tileSet_165
+    21301060: tileSet_166
+    21301062: tileSet_167
+    21301064: tileSet_168
+    21301066: tileSet_169
+    21301068: tileSet_170
+    21301070: tileSet_171
+    21301072: tileSet_172
+    21301074: tileSet_173
+    21301076: tileSet_174
+    21301078: tileSet_175
+    21301080: tileSet_176
+    21301082: tileSet_177
+    21301084: tileSet_178
+    21301086: tileSet_179
+    21301088: tileSet_180
+    21301090: tileSet_181
+    21301092: tileSet_182
+    21301094: tileSet_183
+    21301096: tileSet_184
+    21301098: tileSet_185
+    21301100: tileSet_186
+    21301102: tileSet_187
+    21301104: tileSet_188
+    21301106: tileSet_189
+    21301108: tileSet_190
+    21301110: tileSet_191
+    21301112: tileSet_192
+    21301114: tileSet_193
+    21301116: tileSet_194
+    21301118: tileSet_195
+    21301120: tileSet_196
+    21301122: tileSet_197
+    21301124: tileSet_198
+    21301126: tileSet_199
+    21301128: tileSet_200
+    21301130: tileSet_201
+    21301132: tileSet_202
+    21301134: tileSet_203
+    21301136: tileSet_204
+    21301138: tileSet_205
+    21301140: tileSet_206
+    21301142: tileSet_207
+    21301144: tileSet_208
+    21301146: tileSet_209
+    21301148: tileSet_210
+    21301150: tileSet_211
+    21301152: tileSet_212
+    21301154: tileSet_213
+    21301156: tileSet_214
+    21301158: tileSet_215
+    21301160: tileSet_216
+    21301162: tileSet_217
+    21301164: tileSet_218
+    21301166: tileSet_219
+    21301168: tileSet_220
+    21301170: tileSet_221
+    21301172: tileSet_222
+    21301174: tileSet_223
+    21301176: tileSet_224
+    21301178: tileSet_225
+    21301180: tileSet_226
+    21301182: tileSet_227
+    21301184: tileSet_228
+    21301186: tileSet_229
+    21301188: tileSet_230
+    21301190: tileSet_231
+    21301192: tileSet_232
+    21301194: tileSet_233
+    21301196: tileSet_234
+    21301198: tileSet_235
+    21301200: tileSet_236
+    21301202: tileSet_237
+    21301204: tileSet_238
+    21301206: tileSet_239
+    21301208: tileSet_240
+    21301210: tileSet_241
+    21301212: tileSet_242
+    21301214: tileSet_243
+    21301216: tileSet_244
+    21301218: tileSet_245
+    21301220: tileSet_246
+    21301222: tileSet_247
+    21301224: tileSet_248
+    21301226: tileSet_249
+    21301228: tileSet_250
+    21301230: tileSet_251
+    21301232: tileSet_252
+    21301234: tileSet_253
+    21301236: tileSet_254
+    21301238: tileSet_255
+    21301240: tileSet_256
+    21301242: tileSet_257
+    21301244: tileSet_258
+    21301246: tileSet_259
+    21301248: tileSet_260
+    21301250: tileSet_261
+    21301252: tileSet_262
+    21301254: tileSet_263
+    21301256: tileSet_264
+    21301258: tileSet_265
+    21301260: tileSet_266
+    21301262: tileSet_267
+    21301264: tileSet_268
+    21301266: tileSet_269
+    21301268: tileSet_270
+    21301270: tileSet_271
+    21301272: tileSet_272
+    21301274: tileSet_273
+    21301276: tileSet_274
+    21301278: tileSet_275
+    21301280: tileSet_276
+    21301282: tileSet_277
+    21301284: tileSet_278
+    21301286: tileSet_279
+    21301288: tileSet_280
+    21301290: tileSet_281
+    21301292: tileSet_282
+    21301294: tileSet_283
+    21301296: tileSet_284
+    21301298: tileSet_285
+    21301300: tileSet_286
+    21301302: tileSet_287
+    21301304: tileSet_288
+    21301306: tileSet_289
+    21301308: tileSet_290
+    21301310: tileSet_291
+    21301312: tileSet_292
+    21301314: tileSet_293
+    21301316: tileSet_294
+    21301318: tileSet_295
+    21301320: tileSet_296
+    21301322: tileSet_297
+    21301324: tileSet_298
+    21301326: tileSet_299
+    21301328: tileSet_300
+    21301330: tileSet_301
+    21301332: tileSet_302
+    21301334: tileSet_303
+    21301336: tileSet_304
+    21301338: tileSet_305
+    21301340: tileSet_306
+    21301342: tileSet_307
+    21301344: tileSet_308
+    21301346: tileSet_309
+    21301348: tileSet_310
+    21301350: tileSet_311
+    21301352: tileSet_312
+    21301354: tileSet_313
+    21301356: tileSet_314
+    21301358: tileSet_315
+    21301360: tileSet_316
+    21301362: tileSet_317
+    21301364: tileSet_318
+    21301366: tileSet_319
+    21301368: tileSet_320
+    21301370: tileSet_321
+    21301372: tileSet_322
+    21301374: tileSet_323
+    21301376: tileSet_324
+    21301378: tileSet_325
+    21301380: tileSet_326
+    21301382: tileSet_327
+    21301384: tileSet_328
+    21301386: tileSet_329
+    21301388: tileSet_330
+    21301390: tileSet_331
+    21301392: tileSet_332
+    21301394: tileSet_333
+    21301396: tileSet_334
+    21301398: tileSet_335
+    21301400: tileSet_336
+    21301402: tileSet_337
+    21301404: tileSet_338
+    21301406: tileSet_339
+    21301408: tileSet_340
+    21301410: tileSet_341
+    21301412: tileSet_342
+    21301414: tileSet_343
+    21301416: tileSet_344
+    21301418: tileSet_345
+    21301420: tileSet_346
+    21301422: tileSet_347
+    21301424: tileSet_348
+    21301426: tileSet_349
+    21301428: tileSet_350
+    21301430: tileSet_351
+    21301432: tileSet_352
+    21301434: tileSet_353
+    21301436: tileSet_354
+    21301438: tileSet_355
+    21301440: tileSet_356
+    21301442: tileSet_357
+    21301444: tileSet_358
+    21301446: tileSet_359
+    21301448: tileSet_360
+    21301450: tileSet_361
+    21301452: tileSet_362
+    21301454: tileSet_363
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -401,7 +765,6 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -413,8 +776,10 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_0
+    - serializedVersion: 2
+      name: tileSet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -425,7 +790,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_1
+    - serializedVersion: 2
+      name: tileSet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -436,7 +802,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_2
+    - serializedVersion: 2
+      name: tileSet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -447,7 +814,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_3
+    - serializedVersion: 2
+      name: tileSet_3
       rect:
         serializedVersion: 2
         x: 48
@@ -458,7 +826,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_4
+    - serializedVersion: 2
+      name: tileSet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -469,7 +838,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_5
+    - serializedVersion: 2
+      name: tileSet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -480,7 +850,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_6
+    - serializedVersion: 2
+      name: tileSet_6
       rect:
         serializedVersion: 2
         x: 96
@@ -491,7 +862,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_7
+    - serializedVersion: 2
+      name: tileSet_7
       rect:
         serializedVersion: 2
         x: 0
@@ -502,7 +874,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_8
+    - serializedVersion: 2
+      name: tileSet_8
       rect:
         serializedVersion: 2
         x: 16
@@ -513,7 +886,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_9
+    - serializedVersion: 2
+      name: tileSet_9
       rect:
         serializedVersion: 2
         x: 32
@@ -524,7 +898,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_10
+    - serializedVersion: 2
+      name: tileSet_10
       rect:
         serializedVersion: 2
         x: 48
@@ -535,7 +910,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_11
+    - serializedVersion: 2
+      name: tileSet_11
       rect:
         serializedVersion: 2
         x: 64
@@ -546,7 +922,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_12
+    - serializedVersion: 2
+      name: tileSet_12
       rect:
         serializedVersion: 2
         x: 80
@@ -557,7 +934,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_13
+    - serializedVersion: 2
+      name: tileSet_13
       rect:
         serializedVersion: 2
         x: 96
@@ -568,7 +946,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_14
+    - serializedVersion: 2
+      name: tileSet_14
       rect:
         serializedVersion: 2
         x: 0
@@ -579,7 +958,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_15
+    - serializedVersion: 2
+      name: tileSet_15
       rect:
         serializedVersion: 2
         x: 16
@@ -590,7 +970,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_16
+    - serializedVersion: 2
+      name: tileSet_16
       rect:
         serializedVersion: 2
         x: 32
@@ -601,7 +982,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_17
+    - serializedVersion: 2
+      name: tileSet_17
       rect:
         serializedVersion: 2
         x: 48
@@ -612,7 +994,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_18
+    - serializedVersion: 2
+      name: tileSet_18
       rect:
         serializedVersion: 2
         x: 64
@@ -623,7 +1006,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_19
+    - serializedVersion: 2
+      name: tileSet_19
       rect:
         serializedVersion: 2
         x: 80
@@ -634,7 +1018,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_20
+    - serializedVersion: 2
+      name: tileSet_20
       rect:
         serializedVersion: 2
         x: 96
@@ -645,7 +1030,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_21
+    - serializedVersion: 2
+      name: tileSet_21
       rect:
         serializedVersion: 2
         x: 0
@@ -656,7 +1042,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_22
+    - serializedVersion: 2
+      name: tileSet_22
       rect:
         serializedVersion: 2
         x: 16
@@ -667,7 +1054,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_23
+    - serializedVersion: 2
+      name: tileSet_23
       rect:
         serializedVersion: 2
         x: 32
@@ -678,7 +1066,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_24
+    - serializedVersion: 2
+      name: tileSet_24
       rect:
         serializedVersion: 2
         x: 48
@@ -689,7 +1078,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_25
+    - serializedVersion: 2
+      name: tileSet_25
       rect:
         serializedVersion: 2
         x: 64
@@ -700,7 +1090,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_26
+    - serializedVersion: 2
+      name: tileSet_26
       rect:
         serializedVersion: 2
         x: 80
@@ -711,7 +1102,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_27
+    - serializedVersion: 2
+      name: tileSet_27
       rect:
         serializedVersion: 2
         x: 96
@@ -722,7 +1114,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_28
+    - serializedVersion: 2
+      name: tileSet_28
       rect:
         serializedVersion: 2
         x: 0
@@ -733,7 +1126,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_29
+    - serializedVersion: 2
+      name: tileSet_29
       rect:
         serializedVersion: 2
         x: 16
@@ -744,7 +1138,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_30
+    - serializedVersion: 2
+      name: tileSet_30
       rect:
         serializedVersion: 2
         x: 32
@@ -755,7 +1150,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_31
+    - serializedVersion: 2
+      name: tileSet_31
       rect:
         serializedVersion: 2
         x: 48
@@ -766,7 +1162,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_32
+    - serializedVersion: 2
+      name: tileSet_32
       rect:
         serializedVersion: 2
         x: 64
@@ -777,7 +1174,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_33
+    - serializedVersion: 2
+      name: tileSet_33
       rect:
         serializedVersion: 2
         x: 80
@@ -788,7 +1186,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_34
+    - serializedVersion: 2
+      name: tileSet_34
       rect:
         serializedVersion: 2
         x: 96
@@ -799,7 +1198,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_35
+    - serializedVersion: 2
+      name: tileSet_35
       rect:
         serializedVersion: 2
         x: 0
@@ -810,7 +1210,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_36
+    - serializedVersion: 2
+      name: tileSet_36
       rect:
         serializedVersion: 2
         x: 16
@@ -821,7 +1222,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_37
+    - serializedVersion: 2
+      name: tileSet_37
       rect:
         serializedVersion: 2
         x: 32
@@ -832,7 +1234,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_38
+    - serializedVersion: 2
+      name: tileSet_38
       rect:
         serializedVersion: 2
         x: 48
@@ -843,7 +1246,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_39
+    - serializedVersion: 2
+      name: tileSet_39
       rect:
         serializedVersion: 2
         x: 64
@@ -854,7 +1258,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_40
+    - serializedVersion: 2
+      name: tileSet_40
       rect:
         serializedVersion: 2
         x: 80
@@ -865,7 +1270,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_41
+    - serializedVersion: 2
+      name: tileSet_41
       rect:
         serializedVersion: 2
         x: 96
@@ -876,7 +1282,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_42
+    - serializedVersion: 2
+      name: tileSet_42
       rect:
         serializedVersion: 2
         x: 0
@@ -887,7 +1294,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_43
+    - serializedVersion: 2
+      name: tileSet_43
       rect:
         serializedVersion: 2
         x: 16
@@ -898,7 +1306,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_44
+    - serializedVersion: 2
+      name: tileSet_44
       rect:
         serializedVersion: 2
         x: 32
@@ -909,7 +1318,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_45
+    - serializedVersion: 2
+      name: tileSet_45
       rect:
         serializedVersion: 2
         x: 48
@@ -920,7 +1330,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_46
+    - serializedVersion: 2
+      name: tileSet_46
       rect:
         serializedVersion: 2
         x: 64
@@ -931,7 +1342,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_47
+    - serializedVersion: 2
+      name: tileSet_47
       rect:
         serializedVersion: 2
         x: 80
@@ -942,7 +1354,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_48
+    - serializedVersion: 2
+      name: tileSet_48
       rect:
         serializedVersion: 2
         x: 96
@@ -953,7 +1366,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_49
+    - serializedVersion: 2
+      name: tileSet_49
       rect:
         serializedVersion: 2
         x: 0
@@ -964,7 +1378,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_50
+    - serializedVersion: 2
+      name: tileSet_50
       rect:
         serializedVersion: 2
         x: 16
@@ -975,7 +1390,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_51
+    - serializedVersion: 2
+      name: tileSet_51
       rect:
         serializedVersion: 2
         x: 32
@@ -986,7 +1402,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_52
+    - serializedVersion: 2
+      name: tileSet_52
       rect:
         serializedVersion: 2
         x: 48
@@ -997,7 +1414,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_53
+    - serializedVersion: 2
+      name: tileSet_53
       rect:
         serializedVersion: 2
         x: 64
@@ -1008,7 +1426,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_54
+    - serializedVersion: 2
+      name: tileSet_54
       rect:
         serializedVersion: 2
         x: 80
@@ -1019,7 +1438,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_55
+    - serializedVersion: 2
+      name: tileSet_55
       rect:
         serializedVersion: 2
         x: 96
@@ -1030,7 +1450,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_56
+    - serializedVersion: 2
+      name: tileSet_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1041,7 +1462,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_57
+    - serializedVersion: 2
+      name: tileSet_57
       rect:
         serializedVersion: 2
         x: 16
@@ -1052,7 +1474,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_58
+    - serializedVersion: 2
+      name: tileSet_58
       rect:
         serializedVersion: 2
         x: 32
@@ -1063,7 +1486,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_59
+    - serializedVersion: 2
+      name: tileSet_59
       rect:
         serializedVersion: 2
         x: 48
@@ -1074,7 +1498,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_60
+    - serializedVersion: 2
+      name: tileSet_60
       rect:
         serializedVersion: 2
         x: 64
@@ -1085,7 +1510,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_61
+    - serializedVersion: 2
+      name: tileSet_61
       rect:
         serializedVersion: 2
         x: 80
@@ -1096,7 +1522,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_62
+    - serializedVersion: 2
+      name: tileSet_62
       rect:
         serializedVersion: 2
         x: 96
@@ -1107,7 +1534,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_63
+    - serializedVersion: 2
+      name: tileSet_63
       rect:
         serializedVersion: 2
         x: 0
@@ -1118,7 +1546,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_64
+    - serializedVersion: 2
+      name: tileSet_64
       rect:
         serializedVersion: 2
         x: 16
@@ -1129,7 +1558,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_65
+    - serializedVersion: 2
+      name: tileSet_65
       rect:
         serializedVersion: 2
         x: 32
@@ -1140,7 +1570,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_66
+    - serializedVersion: 2
+      name: tileSet_66
       rect:
         serializedVersion: 2
         x: 48
@@ -1151,7 +1582,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_67
+    - serializedVersion: 2
+      name: tileSet_67
       rect:
         serializedVersion: 2
         x: 64
@@ -1162,7 +1594,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_68
+    - serializedVersion: 2
+      name: tileSet_68
       rect:
         serializedVersion: 2
         x: 80
@@ -1173,7 +1606,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_69
+    - serializedVersion: 2
+      name: tileSet_69
       rect:
         serializedVersion: 2
         x: 96
@@ -1184,7 +1618,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_70
+    - serializedVersion: 2
+      name: tileSet_70
       rect:
         serializedVersion: 2
         x: 0
@@ -1195,7 +1630,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_71
+    - serializedVersion: 2
+      name: tileSet_71
       rect:
         serializedVersion: 2
         x: 16
@@ -1206,7 +1642,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_72
+    - serializedVersion: 2
+      name: tileSet_72
       rect:
         serializedVersion: 2
         x: 32
@@ -1217,7 +1654,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_73
+    - serializedVersion: 2
+      name: tileSet_73
       rect:
         serializedVersion: 2
         x: 48
@@ -1228,7 +1666,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_74
+    - serializedVersion: 2
+      name: tileSet_74
       rect:
         serializedVersion: 2
         x: 64
@@ -1239,7 +1678,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_75
+    - serializedVersion: 2
+      name: tileSet_75
       rect:
         serializedVersion: 2
         x: 80
@@ -1250,7 +1690,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_76
+    - serializedVersion: 2
+      name: tileSet_76
       rect:
         serializedVersion: 2
         x: 96
@@ -1261,7 +1702,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_77
+    - serializedVersion: 2
+      name: tileSet_77
       rect:
         serializedVersion: 2
         x: 0
@@ -1272,7 +1714,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_78
+    - serializedVersion: 2
+      name: tileSet_78
       rect:
         serializedVersion: 2
         x: 16
@@ -1283,7 +1726,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_79
+    - serializedVersion: 2
+      name: tileSet_79
       rect:
         serializedVersion: 2
         x: 32
@@ -1294,7 +1738,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_80
+    - serializedVersion: 2
+      name: tileSet_80
       rect:
         serializedVersion: 2
         x: 48
@@ -1305,7 +1750,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_81
+    - serializedVersion: 2
+      name: tileSet_81
       rect:
         serializedVersion: 2
         x: 64
@@ -1316,7 +1762,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_82
+    - serializedVersion: 2
+      name: tileSet_82
       rect:
         serializedVersion: 2
         x: 80
@@ -1327,7 +1774,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_83
+    - serializedVersion: 2
+      name: tileSet_83
       rect:
         serializedVersion: 2
         x: 96
@@ -1338,7 +1786,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_84
+    - serializedVersion: 2
+      name: tileSet_84
       rect:
         serializedVersion: 2
         x: 0
@@ -1349,7 +1798,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_85
+    - serializedVersion: 2
+      name: tileSet_85
       rect:
         serializedVersion: 2
         x: 16
@@ -1360,7 +1810,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_86
+    - serializedVersion: 2
+      name: tileSet_86
       rect:
         serializedVersion: 2
         x: 32
@@ -1371,7 +1822,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_87
+    - serializedVersion: 2
+      name: tileSet_87
       rect:
         serializedVersion: 2
         x: 48
@@ -1382,7 +1834,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_88
+    - serializedVersion: 2
+      name: tileSet_88
       rect:
         serializedVersion: 2
         x: 64
@@ -1393,7 +1846,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_89
+    - serializedVersion: 2
+      name: tileSet_89
       rect:
         serializedVersion: 2
         x: 80
@@ -1404,7 +1858,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_90
+    - serializedVersion: 2
+      name: tileSet_90
       rect:
         serializedVersion: 2
         x: 96
@@ -1415,7 +1870,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_91
+    - serializedVersion: 2
+      name: tileSet_91
       rect:
         serializedVersion: 2
         x: 0
@@ -1426,7 +1882,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_92
+    - serializedVersion: 2
+      name: tileSet_92
       rect:
         serializedVersion: 2
         x: 16
@@ -1437,7 +1894,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_93
+    - serializedVersion: 2
+      name: tileSet_93
       rect:
         serializedVersion: 2
         x: 32
@@ -1448,7 +1906,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_94
+    - serializedVersion: 2
+      name: tileSet_94
       rect:
         serializedVersion: 2
         x: 48
@@ -1459,7 +1918,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_95
+    - serializedVersion: 2
+      name: tileSet_95
       rect:
         serializedVersion: 2
         x: 64
@@ -1470,7 +1930,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_96
+    - serializedVersion: 2
+      name: tileSet_96
       rect:
         serializedVersion: 2
         x: 80
@@ -1481,7 +1942,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_97
+    - serializedVersion: 2
+      name: tileSet_97
       rect:
         serializedVersion: 2
         x: 96
@@ -1492,7 +1954,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_98
+    - serializedVersion: 2
+      name: tileSet_98
       rect:
         serializedVersion: 2
         x: 0
@@ -1503,7 +1966,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_99
+    - serializedVersion: 2
+      name: tileSet_99
       rect:
         serializedVersion: 2
         x: 16
@@ -1514,7 +1978,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_100
+    - serializedVersion: 2
+      name: tileSet_100
       rect:
         serializedVersion: 2
         x: 32
@@ -1525,7 +1990,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_101
+    - serializedVersion: 2
+      name: tileSet_101
       rect:
         serializedVersion: 2
         x: 48
@@ -1536,7 +2002,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_102
+    - serializedVersion: 2
+      name: tileSet_102
       rect:
         serializedVersion: 2
         x: 64
@@ -1547,7 +2014,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_103
+    - serializedVersion: 2
+      name: tileSet_103
       rect:
         serializedVersion: 2
         x: 80
@@ -1558,7 +2026,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_104
+    - serializedVersion: 2
+      name: tileSet_104
       rect:
         serializedVersion: 2
         x: 96
@@ -1569,7 +2038,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_105
+    - serializedVersion: 2
+      name: tileSet_105
       rect:
         serializedVersion: 2
         x: 0
@@ -1580,7 +2050,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_106
+    - serializedVersion: 2
+      name: tileSet_106
       rect:
         serializedVersion: 2
         x: 16
@@ -1591,7 +2062,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_107
+    - serializedVersion: 2
+      name: tileSet_107
       rect:
         serializedVersion: 2
         x: 32
@@ -1602,7 +2074,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_108
+    - serializedVersion: 2
+      name: tileSet_108
       rect:
         serializedVersion: 2
         x: 48
@@ -1613,7 +2086,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_109
+    - serializedVersion: 2
+      name: tileSet_109
       rect:
         serializedVersion: 2
         x: 64
@@ -1624,7 +2098,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_110
+    - serializedVersion: 2
+      name: tileSet_110
       rect:
         serializedVersion: 2
         x: 80
@@ -1635,7 +2110,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_111
+    - serializedVersion: 2
+      name: tileSet_111
       rect:
         serializedVersion: 2
         x: 96
@@ -1646,7 +2122,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_112
+    - serializedVersion: 2
+      name: tileSet_112
       rect:
         serializedVersion: 2
         x: 0
@@ -1657,7 +2134,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_113
+    - serializedVersion: 2
+      name: tileSet_113
       rect:
         serializedVersion: 2
         x: 16
@@ -1668,7 +2146,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_114
+    - serializedVersion: 2
+      name: tileSet_114
       rect:
         serializedVersion: 2
         x: 32
@@ -1679,7 +2158,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_115
+    - serializedVersion: 2
+      name: tileSet_115
       rect:
         serializedVersion: 2
         x: 48
@@ -1690,7 +2170,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_116
+    - serializedVersion: 2
+      name: tileSet_116
       rect:
         serializedVersion: 2
         x: 64
@@ -1701,7 +2182,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_117
+    - serializedVersion: 2
+      name: tileSet_117
       rect:
         serializedVersion: 2
         x: 80
@@ -1712,7 +2194,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_118
+    - serializedVersion: 2
+      name: tileSet_118
       rect:
         serializedVersion: 2
         x: 96
@@ -1723,7 +2206,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_119
+    - serializedVersion: 2
+      name: tileSet_119
       rect:
         serializedVersion: 2
         x: 0
@@ -1734,7 +2218,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_120
+    - serializedVersion: 2
+      name: tileSet_120
       rect:
         serializedVersion: 2
         x: 16
@@ -1745,7 +2230,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_121
+    - serializedVersion: 2
+      name: tileSet_121
       rect:
         serializedVersion: 2
         x: 32
@@ -1756,7 +2242,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_122
+    - serializedVersion: 2
+      name: tileSet_122
       rect:
         serializedVersion: 2
         x: 48
@@ -1767,7 +2254,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_123
+    - serializedVersion: 2
+      name: tileSet_123
       rect:
         serializedVersion: 2
         x: 64
@@ -1778,7 +2266,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_124
+    - serializedVersion: 2
+      name: tileSet_124
       rect:
         serializedVersion: 2
         x: 80
@@ -1789,7 +2278,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_125
+    - serializedVersion: 2
+      name: tileSet_125
       rect:
         serializedVersion: 2
         x: 96
@@ -1800,7 +2290,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_126
+    - serializedVersion: 2
+      name: tileSet_126
       rect:
         serializedVersion: 2
         x: 0
@@ -1811,7 +2302,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_127
+    - serializedVersion: 2
+      name: tileSet_127
       rect:
         serializedVersion: 2
         x: 16
@@ -1822,7 +2314,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_128
+    - serializedVersion: 2
+      name: tileSet_128
       rect:
         serializedVersion: 2
         x: 32
@@ -1833,7 +2326,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_129
+    - serializedVersion: 2
+      name: tileSet_129
       rect:
         serializedVersion: 2
         x: 48
@@ -1844,7 +2338,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_130
+    - serializedVersion: 2
+      name: tileSet_130
       rect:
         serializedVersion: 2
         x: 64
@@ -1855,7 +2350,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_131
+    - serializedVersion: 2
+      name: tileSet_131
       rect:
         serializedVersion: 2
         x: 80
@@ -1866,7 +2362,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_132
+    - serializedVersion: 2
+      name: tileSet_132
       rect:
         serializedVersion: 2
         x: 96
@@ -1877,7 +2374,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_133
+    - serializedVersion: 2
+      name: tileSet_133
       rect:
         serializedVersion: 2
         x: 0
@@ -1888,7 +2386,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_134
+    - serializedVersion: 2
+      name: tileSet_134
       rect:
         serializedVersion: 2
         x: 16
@@ -1899,7 +2398,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_135
+    - serializedVersion: 2
+      name: tileSet_135
       rect:
         serializedVersion: 2
         x: 32
@@ -1910,7 +2410,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_136
+    - serializedVersion: 2
+      name: tileSet_136
       rect:
         serializedVersion: 2
         x: 48
@@ -1921,7 +2422,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_137
+    - serializedVersion: 2
+      name: tileSet_137
       rect:
         serializedVersion: 2
         x: 64
@@ -1932,7 +2434,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_138
+    - serializedVersion: 2
+      name: tileSet_138
       rect:
         serializedVersion: 2
         x: 80
@@ -1943,7 +2446,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_139
+    - serializedVersion: 2
+      name: tileSet_139
       rect:
         serializedVersion: 2
         x: 96
@@ -1954,7 +2458,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_140
+    - serializedVersion: 2
+      name: tileSet_140
       rect:
         serializedVersion: 2
         x: 0
@@ -1965,7 +2470,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_141
+    - serializedVersion: 2
+      name: tileSet_141
       rect:
         serializedVersion: 2
         x: 16
@@ -1976,7 +2482,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_142
+    - serializedVersion: 2
+      name: tileSet_142
       rect:
         serializedVersion: 2
         x: 32
@@ -1987,7 +2494,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_143
+    - serializedVersion: 2
+      name: tileSet_143
       rect:
         serializedVersion: 2
         x: 48
@@ -1998,7 +2506,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_144
+    - serializedVersion: 2
+      name: tileSet_144
       rect:
         serializedVersion: 2
         x: 64
@@ -2009,7 +2518,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_145
+    - serializedVersion: 2
+      name: tileSet_145
       rect:
         serializedVersion: 2
         x: 80
@@ -2020,7 +2530,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_146
+    - serializedVersion: 2
+      name: tileSet_146
       rect:
         serializedVersion: 2
         x: 96
@@ -2031,7 +2542,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_147
+    - serializedVersion: 2
+      name: tileSet_147
       rect:
         serializedVersion: 2
         x: 0
@@ -2042,7 +2554,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_148
+    - serializedVersion: 2
+      name: tileSet_148
       rect:
         serializedVersion: 2
         x: 16
@@ -2053,7 +2566,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_149
+    - serializedVersion: 2
+      name: tileSet_149
       rect:
         serializedVersion: 2
         x: 32
@@ -2064,7 +2578,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_150
+    - serializedVersion: 2
+      name: tileSet_150
       rect:
         serializedVersion: 2
         x: 48
@@ -2075,7 +2590,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_151
+    - serializedVersion: 2
+      name: tileSet_151
       rect:
         serializedVersion: 2
         x: 64
@@ -2086,7 +2602,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_152
+    - serializedVersion: 2
+      name: tileSet_152
       rect:
         serializedVersion: 2
         x: 80
@@ -2097,7 +2614,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_153
+    - serializedVersion: 2
+      name: tileSet_153
       rect:
         serializedVersion: 2
         x: 96
@@ -2108,7 +2626,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_154
+    - serializedVersion: 2
+      name: tileSet_154
       rect:
         serializedVersion: 2
         x: 0
@@ -2119,7 +2638,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_155
+    - serializedVersion: 2
+      name: tileSet_155
       rect:
         serializedVersion: 2
         x: 16
@@ -2130,7 +2650,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_156
+    - serializedVersion: 2
+      name: tileSet_156
       rect:
         serializedVersion: 2
         x: 32
@@ -2141,7 +2662,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_157
+    - serializedVersion: 2
+      name: tileSet_157
       rect:
         serializedVersion: 2
         x: 48
@@ -2152,7 +2674,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_158
+    - serializedVersion: 2
+      name: tileSet_158
       rect:
         serializedVersion: 2
         x: 64
@@ -2163,7 +2686,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_159
+    - serializedVersion: 2
+      name: tileSet_159
       rect:
         serializedVersion: 2
         x: 80
@@ -2174,7 +2698,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_160
+    - serializedVersion: 2
+      name: tileSet_160
       rect:
         serializedVersion: 2
         x: 96
@@ -2185,7 +2710,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_161
+    - serializedVersion: 2
+      name: tileSet_161
       rect:
         serializedVersion: 2
         x: 0
@@ -2196,7 +2722,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_162
+    - serializedVersion: 2
+      name: tileSet_162
       rect:
         serializedVersion: 2
         x: 16
@@ -2207,7 +2734,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_163
+    - serializedVersion: 2
+      name: tileSet_163
       rect:
         serializedVersion: 2
         x: 32
@@ -2218,7 +2746,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_164
+    - serializedVersion: 2
+      name: tileSet_164
       rect:
         serializedVersion: 2
         x: 48
@@ -2229,7 +2758,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_165
+    - serializedVersion: 2
+      name: tileSet_165
       rect:
         serializedVersion: 2
         x: 64
@@ -2240,7 +2770,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_166
+    - serializedVersion: 2
+      name: tileSet_166
       rect:
         serializedVersion: 2
         x: 80
@@ -2251,7 +2782,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_167
+    - serializedVersion: 2
+      name: tileSet_167
       rect:
         serializedVersion: 2
         x: 96
@@ -2262,7 +2794,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_168
+    - serializedVersion: 2
+      name: tileSet_168
       rect:
         serializedVersion: 2
         x: 0
@@ -2273,7 +2806,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_169
+    - serializedVersion: 2
+      name: tileSet_169
       rect:
         serializedVersion: 2
         x: 16
@@ -2284,7 +2818,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_170
+    - serializedVersion: 2
+      name: tileSet_170
       rect:
         serializedVersion: 2
         x: 32
@@ -2295,7 +2830,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_171
+    - serializedVersion: 2
+      name: tileSet_171
       rect:
         serializedVersion: 2
         x: 48
@@ -2306,7 +2842,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_172
+    - serializedVersion: 2
+      name: tileSet_172
       rect:
         serializedVersion: 2
         x: 64
@@ -2317,7 +2854,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_173
+    - serializedVersion: 2
+      name: tileSet_173
       rect:
         serializedVersion: 2
         x: 80
@@ -2328,7 +2866,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_174
+    - serializedVersion: 2
+      name: tileSet_174
       rect:
         serializedVersion: 2
         x: 96
@@ -2339,7 +2878,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_175
+    - serializedVersion: 2
+      name: tileSet_175
       rect:
         serializedVersion: 2
         x: 0
@@ -2350,7 +2890,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_176
+    - serializedVersion: 2
+      name: tileSet_176
       rect:
         serializedVersion: 2
         x: 16
@@ -2361,7 +2902,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_177
+    - serializedVersion: 2
+      name: tileSet_177
       rect:
         serializedVersion: 2
         x: 32
@@ -2372,7 +2914,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_178
+    - serializedVersion: 2
+      name: tileSet_178
       rect:
         serializedVersion: 2
         x: 48
@@ -2383,7 +2926,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_179
+    - serializedVersion: 2
+      name: tileSet_179
       rect:
         serializedVersion: 2
         x: 64
@@ -2394,7 +2938,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_180
+    - serializedVersion: 2
+      name: tileSet_180
       rect:
         serializedVersion: 2
         x: 80
@@ -2405,7 +2950,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_181
+    - serializedVersion: 2
+      name: tileSet_181
       rect:
         serializedVersion: 2
         x: 96
@@ -2416,7 +2962,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_182
+    - serializedVersion: 2
+      name: tileSet_182
       rect:
         serializedVersion: 2
         x: 0
@@ -2427,7 +2974,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_183
+    - serializedVersion: 2
+      name: tileSet_183
       rect:
         serializedVersion: 2
         x: 16
@@ -2438,7 +2986,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_184
+    - serializedVersion: 2
+      name: tileSet_184
       rect:
         serializedVersion: 2
         x: 32
@@ -2449,7 +2998,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_185
+    - serializedVersion: 2
+      name: tileSet_185
       rect:
         serializedVersion: 2
         x: 48
@@ -2460,7 +3010,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_186
+    - serializedVersion: 2
+      name: tileSet_186
       rect:
         serializedVersion: 2
         x: 64
@@ -2471,7 +3022,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_187
+    - serializedVersion: 2
+      name: tileSet_187
       rect:
         serializedVersion: 2
         x: 80
@@ -2482,7 +3034,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_188
+    - serializedVersion: 2
+      name: tileSet_188
       rect:
         serializedVersion: 2
         x: 96
@@ -2493,7 +3046,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_189
+    - serializedVersion: 2
+      name: tileSet_189
       rect:
         serializedVersion: 2
         x: 0
@@ -2504,7 +3058,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_190
+    - serializedVersion: 2
+      name: tileSet_190
       rect:
         serializedVersion: 2
         x: 16
@@ -2515,7 +3070,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_191
+    - serializedVersion: 2
+      name: tileSet_191
       rect:
         serializedVersion: 2
         x: 32
@@ -2526,7 +3082,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_192
+    - serializedVersion: 2
+      name: tileSet_192
       rect:
         serializedVersion: 2
         x: 48
@@ -2537,7 +3094,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_193
+    - serializedVersion: 2
+      name: tileSet_193
       rect:
         serializedVersion: 2
         x: 64
@@ -2548,7 +3106,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_194
+    - serializedVersion: 2
+      name: tileSet_194
       rect:
         serializedVersion: 2
         x: 80
@@ -2559,7 +3118,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_195
+    - serializedVersion: 2
+      name: tileSet_195
       rect:
         serializedVersion: 2
         x: 96
@@ -2570,7 +3130,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_196
+    - serializedVersion: 2
+      name: tileSet_196
       rect:
         serializedVersion: 2
         x: 0
@@ -2581,7 +3142,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_197
+    - serializedVersion: 2
+      name: tileSet_197
       rect:
         serializedVersion: 2
         x: 16
@@ -2592,7 +3154,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_198
+    - serializedVersion: 2
+      name: tileSet_198
       rect:
         serializedVersion: 2
         x: 32
@@ -2603,7 +3166,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_199
+    - serializedVersion: 2
+      name: tileSet_199
       rect:
         serializedVersion: 2
         x: 48
@@ -2614,7 +3178,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_200
+    - serializedVersion: 2
+      name: tileSet_200
       rect:
         serializedVersion: 2
         x: 64
@@ -2625,7 +3190,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_201
+    - serializedVersion: 2
+      name: tileSet_201
       rect:
         serializedVersion: 2
         x: 80
@@ -2636,7 +3202,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_202
+    - serializedVersion: 2
+      name: tileSet_202
       rect:
         serializedVersion: 2
         x: 96
@@ -2647,7 +3214,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_203
+    - serializedVersion: 2
+      name: tileSet_203
       rect:
         serializedVersion: 2
         x: 0
@@ -2658,7 +3226,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_204
+    - serializedVersion: 2
+      name: tileSet_204
       rect:
         serializedVersion: 2
         x: 16
@@ -2669,7 +3238,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_205
+    - serializedVersion: 2
+      name: tileSet_205
       rect:
         serializedVersion: 2
         x: 32
@@ -2680,7 +3250,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_206
+    - serializedVersion: 2
+      name: tileSet_206
       rect:
         serializedVersion: 2
         x: 48
@@ -2691,7 +3262,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_207
+    - serializedVersion: 2
+      name: tileSet_207
       rect:
         serializedVersion: 2
         x: 64
@@ -2702,7 +3274,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_208
+    - serializedVersion: 2
+      name: tileSet_208
       rect:
         serializedVersion: 2
         x: 80
@@ -2713,7 +3286,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_209
+    - serializedVersion: 2
+      name: tileSet_209
       rect:
         serializedVersion: 2
         x: 96
@@ -2724,7 +3298,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_210
+    - serializedVersion: 2
+      name: tileSet_210
       rect:
         serializedVersion: 2
         x: 0
@@ -2735,7 +3310,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_211
+    - serializedVersion: 2
+      name: tileSet_211
       rect:
         serializedVersion: 2
         x: 16
@@ -2746,7 +3322,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_212
+    - serializedVersion: 2
+      name: tileSet_212
       rect:
         serializedVersion: 2
         x: 32
@@ -2757,7 +3334,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_213
+    - serializedVersion: 2
+      name: tileSet_213
       rect:
         serializedVersion: 2
         x: 48
@@ -2768,7 +3346,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_214
+    - serializedVersion: 2
+      name: tileSet_214
       rect:
         serializedVersion: 2
         x: 64
@@ -2779,7 +3358,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_215
+    - serializedVersion: 2
+      name: tileSet_215
       rect:
         serializedVersion: 2
         x: 80
@@ -2790,7 +3370,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_216
+    - serializedVersion: 2
+      name: tileSet_216
       rect:
         serializedVersion: 2
         x: 96
@@ -2801,7 +3382,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_217
+    - serializedVersion: 2
+      name: tileSet_217
       rect:
         serializedVersion: 2
         x: 0
@@ -2812,7 +3394,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_218
+    - serializedVersion: 2
+      name: tileSet_218
       rect:
         serializedVersion: 2
         x: 16
@@ -2823,7 +3406,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_219
+    - serializedVersion: 2
+      name: tileSet_219
       rect:
         serializedVersion: 2
         x: 32
@@ -2834,7 +3418,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_220
+    - serializedVersion: 2
+      name: tileSet_220
       rect:
         serializedVersion: 2
         x: 48
@@ -2845,7 +3430,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_221
+    - serializedVersion: 2
+      name: tileSet_221
       rect:
         serializedVersion: 2
         x: 64
@@ -2856,7 +3442,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_222
+    - serializedVersion: 2
+      name: tileSet_222
       rect:
         serializedVersion: 2
         x: 80
@@ -2867,7 +3454,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_223
+    - serializedVersion: 2
+      name: tileSet_223
       rect:
         serializedVersion: 2
         x: 96
@@ -2878,7 +3466,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_224
+    - serializedVersion: 2
+      name: tileSet_224
       rect:
         serializedVersion: 2
         x: 0
@@ -2889,7 +3478,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_225
+    - serializedVersion: 2
+      name: tileSet_225
       rect:
         serializedVersion: 2
         x: 16
@@ -2900,7 +3490,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_226
+    - serializedVersion: 2
+      name: tileSet_226
       rect:
         serializedVersion: 2
         x: 32
@@ -2911,7 +3502,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_227
+    - serializedVersion: 2
+      name: tileSet_227
       rect:
         serializedVersion: 2
         x: 48
@@ -2922,7 +3514,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_228
+    - serializedVersion: 2
+      name: tileSet_228
       rect:
         serializedVersion: 2
         x: 64
@@ -2933,7 +3526,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_229
+    - serializedVersion: 2
+      name: tileSet_229
       rect:
         serializedVersion: 2
         x: 80
@@ -2944,7 +3538,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_230
+    - serializedVersion: 2
+      name: tileSet_230
       rect:
         serializedVersion: 2
         x: 96
@@ -2955,7 +3550,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_231
+    - serializedVersion: 2
+      name: tileSet_231
       rect:
         serializedVersion: 2
         x: 0
@@ -2966,7 +3562,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_232
+    - serializedVersion: 2
+      name: tileSet_232
       rect:
         serializedVersion: 2
         x: 16
@@ -2977,7 +3574,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_233
+    - serializedVersion: 2
+      name: tileSet_233
       rect:
         serializedVersion: 2
         x: 32
@@ -2988,7 +3586,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_234
+    - serializedVersion: 2
+      name: tileSet_234
       rect:
         serializedVersion: 2
         x: 48
@@ -2999,7 +3598,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_235
+    - serializedVersion: 2
+      name: tileSet_235
       rect:
         serializedVersion: 2
         x: 64
@@ -3010,7 +3610,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_236
+    - serializedVersion: 2
+      name: tileSet_236
       rect:
         serializedVersion: 2
         x: 80
@@ -3021,7 +3622,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_237
+    - serializedVersion: 2
+      name: tileSet_237
       rect:
         serializedVersion: 2
         x: 96
@@ -3032,7 +3634,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_238
+    - serializedVersion: 2
+      name: tileSet_238
       rect:
         serializedVersion: 2
         x: 0
@@ -3043,7 +3646,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_239
+    - serializedVersion: 2
+      name: tileSet_239
       rect:
         serializedVersion: 2
         x: 16
@@ -3054,7 +3658,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_240
+    - serializedVersion: 2
+      name: tileSet_240
       rect:
         serializedVersion: 2
         x: 32
@@ -3065,7 +3670,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_241
+    - serializedVersion: 2
+      name: tileSet_241
       rect:
         serializedVersion: 2
         x: 48
@@ -3076,7 +3682,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_242
+    - serializedVersion: 2
+      name: tileSet_242
       rect:
         serializedVersion: 2
         x: 64
@@ -3087,7 +3694,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_243
+    - serializedVersion: 2
+      name: tileSet_243
       rect:
         serializedVersion: 2
         x: 80
@@ -3098,7 +3706,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_244
+    - serializedVersion: 2
+      name: tileSet_244
       rect:
         serializedVersion: 2
         x: 96
@@ -3109,7 +3718,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_245
+    - serializedVersion: 2
+      name: tileSet_245
       rect:
         serializedVersion: 2
         x: 0
@@ -3120,7 +3730,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_246
+    - serializedVersion: 2
+      name: tileSet_246
       rect:
         serializedVersion: 2
         x: 16
@@ -3131,7 +3742,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_247
+    - serializedVersion: 2
+      name: tileSet_247
       rect:
         serializedVersion: 2
         x: 32
@@ -3142,7 +3754,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_248
+    - serializedVersion: 2
+      name: tileSet_248
       rect:
         serializedVersion: 2
         x: 48
@@ -3153,7 +3766,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_249
+    - serializedVersion: 2
+      name: tileSet_249
       rect:
         serializedVersion: 2
         x: 64
@@ -3164,7 +3778,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_250
+    - serializedVersion: 2
+      name: tileSet_250
       rect:
         serializedVersion: 2
         x: 80
@@ -3175,7 +3790,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_251
+    - serializedVersion: 2
+      name: tileSet_251
       rect:
         serializedVersion: 2
         x: 96
@@ -3186,7 +3802,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_252
+    - serializedVersion: 2
+      name: tileSet_252
       rect:
         serializedVersion: 2
         x: 0
@@ -3197,7 +3814,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_253
+    - serializedVersion: 2
+      name: tileSet_253
       rect:
         serializedVersion: 2
         x: 16
@@ -3208,7 +3826,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_254
+    - serializedVersion: 2
+      name: tileSet_254
       rect:
         serializedVersion: 2
         x: 32
@@ -3219,7 +3838,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_255
+    - serializedVersion: 2
+      name: tileSet_255
       rect:
         serializedVersion: 2
         x: 48
@@ -3230,7 +3850,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_256
+    - serializedVersion: 2
+      name: tileSet_256
       rect:
         serializedVersion: 2
         x: 64
@@ -3241,7 +3862,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_257
+    - serializedVersion: 2
+      name: tileSet_257
       rect:
         serializedVersion: 2
         x: 80
@@ -3252,7 +3874,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_258
+    - serializedVersion: 2
+      name: tileSet_258
       rect:
         serializedVersion: 2
         x: 96
@@ -3263,7 +3886,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_259
+    - serializedVersion: 2
+      name: tileSet_259
       rect:
         serializedVersion: 2
         x: 0
@@ -3274,7 +3898,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_260
+    - serializedVersion: 2
+      name: tileSet_260
       rect:
         serializedVersion: 2
         x: 16
@@ -3285,7 +3910,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_261
+    - serializedVersion: 2
+      name: tileSet_261
       rect:
         serializedVersion: 2
         x: 32
@@ -3296,7 +3922,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_262
+    - serializedVersion: 2
+      name: tileSet_262
       rect:
         serializedVersion: 2
         x: 48
@@ -3307,7 +3934,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_263
+    - serializedVersion: 2
+      name: tileSet_263
       rect:
         serializedVersion: 2
         x: 64
@@ -3318,7 +3946,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_264
+    - serializedVersion: 2
+      name: tileSet_264
       rect:
         serializedVersion: 2
         x: 80
@@ -3329,7 +3958,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_265
+    - serializedVersion: 2
+      name: tileSet_265
       rect:
         serializedVersion: 2
         x: 96
@@ -3340,7 +3970,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_266
+    - serializedVersion: 2
+      name: tileSet_266
       rect:
         serializedVersion: 2
         x: 0
@@ -3351,7 +3982,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_267
+    - serializedVersion: 2
+      name: tileSet_267
       rect:
         serializedVersion: 2
         x: 16
@@ -3362,7 +3994,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_268
+    - serializedVersion: 2
+      name: tileSet_268
       rect:
         serializedVersion: 2
         x: 32
@@ -3373,7 +4006,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_269
+    - serializedVersion: 2
+      name: tileSet_269
       rect:
         serializedVersion: 2
         x: 48
@@ -3384,7 +4018,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_270
+    - serializedVersion: 2
+      name: tileSet_270
       rect:
         serializedVersion: 2
         x: 64
@@ -3395,7 +4030,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_271
+    - serializedVersion: 2
+      name: tileSet_271
       rect:
         serializedVersion: 2
         x: 80
@@ -3406,7 +4042,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_272
+    - serializedVersion: 2
+      name: tileSet_272
       rect:
         serializedVersion: 2
         x: 96
@@ -3417,7 +4054,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_273
+    - serializedVersion: 2
+      name: tileSet_273
       rect:
         serializedVersion: 2
         x: 0
@@ -3428,7 +4066,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_274
+    - serializedVersion: 2
+      name: tileSet_274
       rect:
         serializedVersion: 2
         x: 16
@@ -3439,7 +4078,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_275
+    - serializedVersion: 2
+      name: tileSet_275
       rect:
         serializedVersion: 2
         x: 32
@@ -3450,7 +4090,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_276
+    - serializedVersion: 2
+      name: tileSet_276
       rect:
         serializedVersion: 2
         x: 48
@@ -3461,7 +4102,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_277
+    - serializedVersion: 2
+      name: tileSet_277
       rect:
         serializedVersion: 2
         x: 64
@@ -3472,7 +4114,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_278
+    - serializedVersion: 2
+      name: tileSet_278
       rect:
         serializedVersion: 2
         x: 80
@@ -3483,7 +4126,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_279
+    - serializedVersion: 2
+      name: tileSet_279
       rect:
         serializedVersion: 2
         x: 96
@@ -3494,7 +4138,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_280
+    - serializedVersion: 2
+      name: tileSet_280
       rect:
         serializedVersion: 2
         x: 0
@@ -3505,7 +4150,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_281
+    - serializedVersion: 2
+      name: tileSet_281
       rect:
         serializedVersion: 2
         x: 16
@@ -3516,7 +4162,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_282
+    - serializedVersion: 2
+      name: tileSet_282
       rect:
         serializedVersion: 2
         x: 32
@@ -3527,7 +4174,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_283
+    - serializedVersion: 2
+      name: tileSet_283
       rect:
         serializedVersion: 2
         x: 48
@@ -3538,7 +4186,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_284
+    - serializedVersion: 2
+      name: tileSet_284
       rect:
         serializedVersion: 2
         x: 64
@@ -3549,7 +4198,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_285
+    - serializedVersion: 2
+      name: tileSet_285
       rect:
         serializedVersion: 2
         x: 80
@@ -3560,7 +4210,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_286
+    - serializedVersion: 2
+      name: tileSet_286
       rect:
         serializedVersion: 2
         x: 96
@@ -3571,7 +4222,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_287
+    - serializedVersion: 2
+      name: tileSet_287
       rect:
         serializedVersion: 2
         x: 0
@@ -3582,7 +4234,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_288
+    - serializedVersion: 2
+      name: tileSet_288
       rect:
         serializedVersion: 2
         x: 16
@@ -3593,7 +4246,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_289
+    - serializedVersion: 2
+      name: tileSet_289
       rect:
         serializedVersion: 2
         x: 32
@@ -3604,7 +4258,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_290
+    - serializedVersion: 2
+      name: tileSet_290
       rect:
         serializedVersion: 2
         x: 48
@@ -3615,7 +4270,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_291
+    - serializedVersion: 2
+      name: tileSet_291
       rect:
         serializedVersion: 2
         x: 64
@@ -3626,7 +4282,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_292
+    - serializedVersion: 2
+      name: tileSet_292
       rect:
         serializedVersion: 2
         x: 80
@@ -3637,7 +4294,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_293
+    - serializedVersion: 2
+      name: tileSet_293
       rect:
         serializedVersion: 2
         x: 96
@@ -3648,7 +4306,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_294
+    - serializedVersion: 2
+      name: tileSet_294
       rect:
         serializedVersion: 2
         x: 0
@@ -3659,7 +4318,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_295
+    - serializedVersion: 2
+      name: tileSet_295
       rect:
         serializedVersion: 2
         x: 16
@@ -3670,7 +4330,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_296
+    - serializedVersion: 2
+      name: tileSet_296
       rect:
         serializedVersion: 2
         x: 32
@@ -3681,7 +4342,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_297
+    - serializedVersion: 2
+      name: tileSet_297
       rect:
         serializedVersion: 2
         x: 48
@@ -3692,7 +4354,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_298
+    - serializedVersion: 2
+      name: tileSet_298
       rect:
         serializedVersion: 2
         x: 64
@@ -3703,7 +4366,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_299
+    - serializedVersion: 2
+      name: tileSet_299
       rect:
         serializedVersion: 2
         x: 80
@@ -3714,7 +4378,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_300
+    - serializedVersion: 2
+      name: tileSet_300
       rect:
         serializedVersion: 2
         x: 96
@@ -3725,7 +4390,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_301
+    - serializedVersion: 2
+      name: tileSet_301
       rect:
         serializedVersion: 2
         x: 0
@@ -3736,7 +4402,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_302
+    - serializedVersion: 2
+      name: tileSet_302
       rect:
         serializedVersion: 2
         x: 16
@@ -3747,7 +4414,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_303
+    - serializedVersion: 2
+      name: tileSet_303
       rect:
         serializedVersion: 2
         x: 32
@@ -3758,7 +4426,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_304
+    - serializedVersion: 2
+      name: tileSet_304
       rect:
         serializedVersion: 2
         x: 48
@@ -3769,7 +4438,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_305
+    - serializedVersion: 2
+      name: tileSet_305
       rect:
         serializedVersion: 2
         x: 64
@@ -3780,7 +4450,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_306
+    - serializedVersion: 2
+      name: tileSet_306
       rect:
         serializedVersion: 2
         x: 80
@@ -3791,7 +4462,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_307
+    - serializedVersion: 2
+      name: tileSet_307
       rect:
         serializedVersion: 2
         x: 96
@@ -3802,7 +4474,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_308
+    - serializedVersion: 2
+      name: tileSet_308
       rect:
         serializedVersion: 2
         x: 0
@@ -3813,7 +4486,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_309
+    - serializedVersion: 2
+      name: tileSet_309
       rect:
         serializedVersion: 2
         x: 16
@@ -3824,7 +4498,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_310
+    - serializedVersion: 2
+      name: tileSet_310
       rect:
         serializedVersion: 2
         x: 32
@@ -3835,7 +4510,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_311
+    - serializedVersion: 2
+      name: tileSet_311
       rect:
         serializedVersion: 2
         x: 48
@@ -3846,7 +4522,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_312
+    - serializedVersion: 2
+      name: tileSet_312
       rect:
         serializedVersion: 2
         x: 64
@@ -3857,7 +4534,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_313
+    - serializedVersion: 2
+      name: tileSet_313
       rect:
         serializedVersion: 2
         x: 80
@@ -3868,7 +4546,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_314
+    - serializedVersion: 2
+      name: tileSet_314
       rect:
         serializedVersion: 2
         x: 96
@@ -3879,7 +4558,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_315
+    - serializedVersion: 2
+      name: tileSet_315
       rect:
         serializedVersion: 2
         x: 0
@@ -3890,7 +4570,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_316
+    - serializedVersion: 2
+      name: tileSet_316
       rect:
         serializedVersion: 2
         x: 16
@@ -3901,7 +4582,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_317
+    - serializedVersion: 2
+      name: tileSet_317
       rect:
         serializedVersion: 2
         x: 32
@@ -3912,7 +4594,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_318
+    - serializedVersion: 2
+      name: tileSet_318
       rect:
         serializedVersion: 2
         x: 48
@@ -3923,7 +4606,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_319
+    - serializedVersion: 2
+      name: tileSet_319
       rect:
         serializedVersion: 2
         x: 64
@@ -3934,7 +4618,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_320
+    - serializedVersion: 2
+      name: tileSet_320
       rect:
         serializedVersion: 2
         x: 80
@@ -3945,7 +4630,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_321
+    - serializedVersion: 2
+      name: tileSet_321
       rect:
         serializedVersion: 2
         x: 96
@@ -3956,7 +4642,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_322
+    - serializedVersion: 2
+      name: tileSet_322
       rect:
         serializedVersion: 2
         x: 0
@@ -3967,7 +4654,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_323
+    - serializedVersion: 2
+      name: tileSet_323
       rect:
         serializedVersion: 2
         x: 16
@@ -3978,7 +4666,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_324
+    - serializedVersion: 2
+      name: tileSet_324
       rect:
         serializedVersion: 2
         x: 32
@@ -3989,7 +4678,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_325
+    - serializedVersion: 2
+      name: tileSet_325
       rect:
         serializedVersion: 2
         x: 48
@@ -4000,7 +4690,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_326
+    - serializedVersion: 2
+      name: tileSet_326
       rect:
         serializedVersion: 2
         x: 64
@@ -4011,7 +4702,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_327
+    - serializedVersion: 2
+      name: tileSet_327
       rect:
         serializedVersion: 2
         x: 80
@@ -4022,7 +4714,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_328
+    - serializedVersion: 2
+      name: tileSet_328
       rect:
         serializedVersion: 2
         x: 96
@@ -4033,7 +4726,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_329
+    - serializedVersion: 2
+      name: tileSet_329
       rect:
         serializedVersion: 2
         x: 0
@@ -4044,7 +4738,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_330
+    - serializedVersion: 2
+      name: tileSet_330
       rect:
         serializedVersion: 2
         x: 16
@@ -4055,7 +4750,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_331
+    - serializedVersion: 2
+      name: tileSet_331
       rect:
         serializedVersion: 2
         x: 32
@@ -4066,7 +4762,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_332
+    - serializedVersion: 2
+      name: tileSet_332
       rect:
         serializedVersion: 2
         x: 48
@@ -4077,7 +4774,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_333
+    - serializedVersion: 2
+      name: tileSet_333
       rect:
         serializedVersion: 2
         x: 64
@@ -4088,7 +4786,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_334
+    - serializedVersion: 2
+      name: tileSet_334
       rect:
         serializedVersion: 2
         x: 80
@@ -4099,7 +4798,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_335
+    - serializedVersion: 2
+      name: tileSet_335
       rect:
         serializedVersion: 2
         x: 96
@@ -4110,7 +4810,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_336
+    - serializedVersion: 2
+      name: tileSet_336
       rect:
         serializedVersion: 2
         x: 0
@@ -4121,7 +4822,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_337
+    - serializedVersion: 2
+      name: tileSet_337
       rect:
         serializedVersion: 2
         x: 16
@@ -4132,7 +4834,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_338
+    - serializedVersion: 2
+      name: tileSet_338
       rect:
         serializedVersion: 2
         x: 32
@@ -4143,7 +4846,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_339
+    - serializedVersion: 2
+      name: tileSet_339
       rect:
         serializedVersion: 2
         x: 48
@@ -4154,7 +4858,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_340
+    - serializedVersion: 2
+      name: tileSet_340
       rect:
         serializedVersion: 2
         x: 64
@@ -4165,7 +4870,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_341
+    - serializedVersion: 2
+      name: tileSet_341
       rect:
         serializedVersion: 2
         x: 80
@@ -4176,7 +4882,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_342
+    - serializedVersion: 2
+      name: tileSet_342
       rect:
         serializedVersion: 2
         x: 96
@@ -4187,7 +4894,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_343
+    - serializedVersion: 2
+      name: tileSet_343
       rect:
         serializedVersion: 2
         x: 0
@@ -4198,7 +4906,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_344
+    - serializedVersion: 2
+      name: tileSet_344
       rect:
         serializedVersion: 2
         x: 16
@@ -4209,7 +4918,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_345
+    - serializedVersion: 2
+      name: tileSet_345
       rect:
         serializedVersion: 2
         x: 32
@@ -4220,7 +4930,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_346
+    - serializedVersion: 2
+      name: tileSet_346
       rect:
         serializedVersion: 2
         x: 48
@@ -4231,7 +4942,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_347
+    - serializedVersion: 2
+      name: tileSet_347
       rect:
         serializedVersion: 2
         x: 64
@@ -4242,7 +4954,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_348
+    - serializedVersion: 2
+      name: tileSet_348
       rect:
         serializedVersion: 2
         x: 80
@@ -4253,7 +4966,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_349
+    - serializedVersion: 2
+      name: tileSet_349
       rect:
         serializedVersion: 2
         x: 96
@@ -4264,7 +4978,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_350
+    - serializedVersion: 2
+      name: tileSet_350
       rect:
         serializedVersion: 2
         x: 0
@@ -4275,7 +4990,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_351
+    - serializedVersion: 2
+      name: tileSet_351
       rect:
         serializedVersion: 2
         x: 16
@@ -4286,7 +5002,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_352
+    - serializedVersion: 2
+      name: tileSet_352
       rect:
         serializedVersion: 2
         x: 32
@@ -4297,7 +5014,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_353
+    - serializedVersion: 2
+      name: tileSet_353
       rect:
         serializedVersion: 2
         x: 48
@@ -4308,7 +5026,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_354
+    - serializedVersion: 2
+      name: tileSet_354
       rect:
         serializedVersion: 2
         x: 64
@@ -4319,7 +5038,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_355
+    - serializedVersion: 2
+      name: tileSet_355
       rect:
         serializedVersion: 2
         x: 80
@@ -4330,7 +5050,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_356
+    - serializedVersion: 2
+      name: tileSet_356
       rect:
         serializedVersion: 2
         x: 96
@@ -4341,7 +5062,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_357
+    - serializedVersion: 2
+      name: tileSet_357
       rect:
         serializedVersion: 2
         x: 0
@@ -4352,7 +5074,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_358
+    - serializedVersion: 2
+      name: tileSet_358
       rect:
         serializedVersion: 2
         x: 16
@@ -4363,7 +5086,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_359
+    - serializedVersion: 2
+      name: tileSet_359
       rect:
         serializedVersion: 2
         x: 32
@@ -4374,7 +5098,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_360
+    - serializedVersion: 2
+      name: tileSet_360
       rect:
         serializedVersion: 2
         x: 48
@@ -4385,7 +5110,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_361
+    - serializedVersion: 2
+      name: tileSet_361
       rect:
         serializedVersion: 2
         x: 64
@@ -4396,7 +5122,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_362
+    - serializedVersion: 2
+      name: tileSet_362
       rect:
         serializedVersion: 2
         x: 80
@@ -4407,7 +5134,8 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Tile-set - Toen's Medieval Strategy (16x16) - v.1.0_363
+    - serializedVersion: 2
+      name: tileSet_363
       rect:
         serializedVersion: 2
         x: 96
