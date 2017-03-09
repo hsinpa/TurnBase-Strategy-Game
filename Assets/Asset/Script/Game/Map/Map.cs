@@ -147,8 +147,10 @@ public class Map : MonoBehaviour {
 
 
 	public Unit GenerateUnitToPos(User p_user, GameObject prefab, UnitPlacementComponent p_placement) {
+		string unitClass = p_placement.propertyJSON.GetField("class").str;
+
 		Sprite sprite = UtilityMethod.LoadSpriteFromMulti( Resources.LoadAll<Sprite>("characters"), 
-							p_placement.userType.ToString("g").ToLower() + "_"+ p_placement.propertyJSON.GetField("class").str);
+							p_placement.userType.ToString("g").ToLower() + "_"+ unitClass);
 		
 		Transform unitHolder = transform.FindChild("units");
 		GameObject item = GameObject.Instantiate(prefab);

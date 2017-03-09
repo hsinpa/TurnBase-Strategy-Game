@@ -64,7 +64,7 @@ public class GridManager : MonoBehaviour {
 	public void FindAttackGrid(Unit unit) {
 		List<GridHolder> canAttackGrid = new List<GridHolder>();
 
-		unit.currentWeapon.GetAttackPoint(unit.transform.position).ForEach(delegate(Vector2 obj) {
+		unit.currentWeapon.GetAttackPoint(unit.unitPos).ForEach(delegate(Vector2 obj) {
 			if (map.grids.FindAll(x => x.gridPosition == obj).Count > 0) {
 				GridHolder grid = map.FindTileByPos(obj);
 				grid.gridStatus = GridHolder.Status.Attack;
