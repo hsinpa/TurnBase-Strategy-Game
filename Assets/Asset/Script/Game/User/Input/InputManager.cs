@@ -15,6 +15,9 @@ public class InputManager :  DragHandler
     private GameUIManager gameUI;
     public Map _Map;
 
+    //Current during dragging event
+    private GridHolder currentHolder;
+
     User player { get { return transform.FindChild("player").GetComponent<User>(); } }
 
     // Use this for initialization
@@ -43,17 +46,26 @@ public class InputManager :  DragHandler
     {
         int T_layer = GeneralSetting.terrainLayer;
 
-        Vector3 mouseposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        Collider2D collide = Physics2D.OverlapPoint(new Vector2(mouseposition.x, mouseposition.y), T_layer);
+        GridHolder gridHolder = GetGridCollider( Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)) );
+        if (gridHolder == null) return;
 
-        if (collide == null || collide.tag != "Ground" || collide.GetComponent<GridHolder>().gridStatus != GridHolder.Status.Move) return;
-
-        List<Tile> tiles = FindPath(p_unit.unitPos, collide.transform.position);
+        List<Tile> tiles = FindPath(p_unit.unitPos, gridHolder.transform.position);
         recordTile = tiles;
 
         List<Vector2> pathList = tiles.Select(x => x.position).ToList();
         pathList.Insert(0, p_unit.unitPos);
         _Map.gridManager.DrawPathLine(pathList);
+    }
+
+    //Get grid gollider from raycasting and its movable
+    public GridHolder GetGridCollider(Vector3 p_position) {
+        int T_layer = GeneralSetting.terrainLayer;
+
+        Collider2D collide = Physics2D.OverlapPoint(new Vector2(p_position.x, p_position.y), T_layer);
+
+        if (collide == null || collide.tag != "Ground" || collide.GetComponent<GridHolder>().gridStatus != GridHolder.Status.Move) return null;
+
+        return collide.GetComponent<GridHolder>();
     }
 
     /// <summary>
@@ -98,15 +110,22 @@ public class InputManager :  DragHandler
     {
         p_moveunit.unitPos = p_lastTiles.position;
         p_moveunit.status = Unit.Status.Moved;
+
+
+        
+        
+        gameManager.gameState.VerifyTile(_Map.FindTileByPos(p_moveunit.unitPos), gameManager.mMapPrefab  );
+
         FreePanel();
     }
 
     //Resume unit to it
     public void ResumeUnit(Unit p_unit, bool isIdle = true)
     {
-        p_unit.unitPos = gameManager.map.gridManager.originTile;
+        p_unit.transform.position = p_unit.unitPos;
         p_unit.status = (isIdle) ? Unit.Status.Idle : Unit.Status.Moved;
         FreePanel();
+        moveUnit = null;
     }
 
     public void DisplayRoute(Unit p_unit)
@@ -164,21 +183,36 @@ public class InputManager :  DragHandler
     public override void OnDrag(Vector3 p_mousePosition) {
 		if (moveUnit == null) return; 
         base.OnDrag(p_mousePosition);
-        
-		PathTracking( moveUnit );
+
         //Move Friendly Unit
 		moveUnit.transform.position = new Vector2( p_mousePosition.x, p_mousePosition.y);
+        GridHolder gridHolder = GetGridCollider(moveUnit.transform.position);
+
+        if (currentHolder != gridHolder) {
+    		PathTracking( moveUnit );
+        }
+
+        currentHolder = gridHolder;
     }
 
     public override void OnDrop(Vector3 p_mousePosition) {
         List<Collider2D> collides = GetAllColliderByMousePos(p_mousePosition, moveUnit);
 
-        if (collides == null || recordTile.Count == 0) ResumeUnit(moveUnit);
+        if (collides == null || collides.Count <= 0) {
+            ResumeUnit(moveUnit);
+            return;
+        }
         Collider2D mCollide = collides[0];
 
         if (mCollide.tag == "Ground" && mCollide.GetComponent<GridHolder>().gridStatus == GridHolder.Status.Move)
         {
             Debug.Log("Is Ground");
+
+            if ( recordTile.Count == 0) {
+                ResumeUnit(moveUnit);
+                return;
+            }
+
             //Normal Grid
             MoveUnitFromDrop(moveUnit, recordTile[recordTile.Count - 1]);
         }
@@ -205,8 +239,7 @@ public class InputManager :  DragHandler
             ResumeUnit(moveUnit);
         }
 
-
-		moveUnit = null;
+        gameManager.gameState.VerifyGameState();
         base.OnDrop(p_mousePosition);
 	}
 }

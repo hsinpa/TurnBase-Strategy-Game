@@ -18,21 +18,22 @@ public class Map : MonoBehaviour {
 	private CSVFile attributeCSV;
 	public GridManager gridManager;
 
-	public void Load(Camera p_camera) {
+	public void SetUp() {
 		mapSprite = Resources.LoadAll<Sprite>("tileSet");
-		TextAsset bindata= Resources.Load("Database/Map/level-1") as TextAsset;
 		attributeCSV = new CSVFile( Resources.Load<TextAsset>( "Database/srpg - attribute" ).text );
-		mapJson = new JSONObject(bindata.ToString());
-		
 
+		gridManager = GetComponent<GridManager>();
+		gridManager.Prepare();
+
+	}
+
+	public void LoadMap(string p_mapname ) {
+		TextAsset bindata= Resources.Load("Database/Map/"+p_mapname) as TextAsset;
+		mapJson = new JSONObject(bindata.ToString());
 		height = (int)mapJson.GetField("height").n;
 		width = (int)mapJson.GetField("width").n;
 
 		DrawMap( mapJson.GetField("layers").list );
-		gridManager = GetComponent<GridManager>();
-		gridManager.Prepare();
-
-
 	}
 
 	public GameObject PrepareHolderObject() {
@@ -95,7 +96,7 @@ public class Map : MonoBehaviour {
 		GridHolder gridScript = FindTileByPos(position);
 
 		if (gridScript != null) {
-				gridScript.mPlacementPoint = placementPoint;
+				gridScript.mPlacementPoint.Add(placementPoint);
 				placements.Add( placementPoint );
 			}
 		}
@@ -162,13 +163,15 @@ public class Map : MonoBehaviour {
 		
 		SpriteRenderer unitRenderer = item.GetComponent<SpriteRenderer>();
 		unitRenderer.sprite = sprite;
-		
+		//If this sprite is not player, then flip its x vector
+		if (p_placement.userType != EventFlag.UserType.Player) unitRenderer.flipX = true;
+
 		Bounds bounds = unitRenderer.GetComponent<SpriteRenderer>().sprite.bounds;
 
 		Vector3 scaleVector = UtilityMethod.ScaleToWorldSize( bounds.size, 1 );
 		unitRenderer.transform.localScale = scaleVector;
 
-		unit.Set(p_user);
+		unit.Set(p_user, unitClass);
 		p_user.allUnits.Add( unit );
 		return unit;
 	}

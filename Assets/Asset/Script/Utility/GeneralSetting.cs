@@ -16,9 +16,10 @@ namespace Utility {
 		public static Color32 friend_color = new Color32(46, 204, 113, 255);
 
 		public static Color32 c_white = Color.white;
-		public static Color32 dark_red = new Color32(192, 57, 43, 255);
-		public static Color32 shallow_red = new Color32(231, 76, 60, 255);
-		//
 
+		public static Color32 shallow_yellow = new Color32(241, 196, 15, 255);
+		public static Color32 dark_yellow = new Color32(243, 156, 18, 255);
+		//rgb(241, 196, 15)
+		
 	}
 }

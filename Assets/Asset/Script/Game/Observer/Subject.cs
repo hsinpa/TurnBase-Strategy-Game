@@ -18,6 +18,7 @@ namespace ObserverPattenr {
 
 		public void notify( string entity, params object[] objects) {
 			for (int i = 0; i < mObservers.Count; i++) {
+				if (mObservers[i] == null) continue;
 				mObservers[i].OnNotify(entity, objects);
 		  }
 		}

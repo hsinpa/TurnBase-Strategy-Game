@@ -74,9 +74,9 @@ public class Unit : MonoBehaviour {
 	public List<Weapon> weaponSets = new List<Weapon>();
 
 
-	public void Set(User p_user) {
+	public void Set(User p_user, string p_class) {
 		parent = p_user;
-		addTestWeapon();
+		addTestWeapon(p_class);
 		guid = System.Guid.NewGuid().ToString();
 
 		transform.name = guid;
@@ -91,11 +91,11 @@ public class Unit : MonoBehaviour {
 		});
 	}
 
-	public void Attack(Unit p_unit, GridHolder p_terrain) {
-		AttackFormula formula = new AttackFormula(currentWeapon, p_terrain, this, p_unit);
-		Debug.Log("Damaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy + " Target " +p_unit.name);
+	public void Attack(Unit p_target, GridHolder p_terrain) {
+		AttackFormula formula = new AttackFormula(currentWeapon, p_terrain, this, p_target);
+		Debug.Log("Damaga " + formula.GetDamage() + " ,hitRate " +formula.accuracy + " Target " +p_target.name);
 		if (!UtilityMethod.PercentageGame(formula.accuracy)) {
-			p_unit.hp = p_unit.hp - formula.GetDamage();
+			p_target.hp = p_target.hp - formula.GetDamage();
 		}
 	}
 
@@ -106,8 +106,31 @@ public class Unit : MonoBehaviour {
 	}
 
 	//Test function
-	void addTestWeapon() {
-		Archer weapon = new Archer();
+	void addTestWeapon( string p_class ) {
+		Weapon weapon;
+		switch (p_class) {
+			case "knight":
+				weapon = new Melee();
+			break;
+
+			case "archer":
+				weapon = new Archer();
+
+			break;
+
+			case "warrior" :
+				weapon = new Melee();
+
+			break;
+
+			case "troop":
+				weapon = new Melee();
+			break;
+
+			default:
+				weapon = new Melee();
+			break;
+		}
 		weapon.might = 4;
 		weapon.name = "Test One";
 		weapon.rangeSet = Weapon.RangeSet.Melee;

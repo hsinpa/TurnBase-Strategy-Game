@@ -18,9 +18,11 @@ public class AIPattern {
 			List<GridHolder> grids = gridManager.FindPossibleRoute(p_unit, mGameManager.player);
 
 			if (grids.Count > 0) {
-				GridHolder attackGrids = FindBestAttackTarget(gridManager.FindNodeWithWeaponRange( grids, p_unit ), mGameManager.player.allUnits);
+				//Not Move yet, find if there is someone to hit aside
+				GridHolder attackGrids = FindBestAttackTarget(gridManager.dijkstra.FindNodeWithWeaponRange( grids, p_unit ), mGameManager.player.allUnits);
 				if (attackGrids != null) return attackGrids;
 
+				//No target beside, then try to find a best target from walking to them
 				return CalculateBestLandPoint(grids, mGameManager.player.allUnits);
 			}
 
@@ -36,6 +38,7 @@ public class AIPattern {
 			}
 
 			if (possibleTarget.Count > 0) {
+				//Hit the one with less hp
 				Unit target = possibleTarget.OrderBy(x => x.hp).First();
 				p_unit.Attack(target, mGameManager.map.FindTileByPos(target.unitPos ));
 				return target;
@@ -50,7 +53,8 @@ public class AIPattern {
 
 			for (int i = 0; i < grids.Count; i++) {
 				GridHolder grid = grids[i];
-				grid.landScore=0;
+				//reset landscore
+				// grid.landScore=0;
 				foreach (Unit unit in enemyUnits) {
 					 if (grid.gridPosition == unit.unitPos) {
 						grid.landScore = unit.hp;
@@ -61,13 +65,12 @@ public class AIPattern {
 
 
 			if (possibleGrid.Count > 0) {
+				//Return the best value target
 				return mGameManager.map.FindTileByPos(possibleGrid.OrderBy(x => x.landScore).First().attackPos);
 			}
 
 			return null;
 		}
-
-
 
 
 		public GridHolder CalculateBestLandPoint(List<GridHolder> grids, List<Unit> enemyUnits ) {
@@ -77,6 +80,7 @@ public class AIPattern {
 				grid.landScore = grid.tile.defenseBonus * 2;
 				List<float> collectUnitScore = new List<float>();
 
+				//Give score by the distance between enemy 
 				foreach (Unit unit in enemyUnits) {
 					collectUnitScore.Add ( -Vector2.Distance(grid.gridPosition, unit.transform.position ) );
 				}

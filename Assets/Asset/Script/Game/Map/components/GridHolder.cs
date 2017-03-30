@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GridHolder : MonoBehaviour {
 	public enum Status {Idle, Move, Attack }
@@ -24,7 +25,8 @@ public class GridHolder : MonoBehaviour {
 			mGridStatus = value;
 		}
 	}
-	public UnitPlacementComponent mPlacementPoint = null;
+
+	public List<UnitPlacementComponent> mPlacementPoint = new List<UnitPlacementComponent>();
 
 	private Status mGridStatus = Status.Idle;
 
@@ -47,4 +49,4 @@ public class GridHolder : MonoBehaviour {
 		spriteRenderer.color =  new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, alpha );
 		canMove = state;
     }
-}	
+}

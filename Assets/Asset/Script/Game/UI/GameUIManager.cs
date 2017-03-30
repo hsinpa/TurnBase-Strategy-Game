@@ -7,12 +7,16 @@ public class GameUIManager : Observer{
 	GameManager gameManager;
 	public Animator actionMenu { get { return transform.Find("ActionMenu").GetComponent<Animator>(); } }
 
-	public void SetUp(MainApp p_main) {
-		gameManager = p_main.game;
+	public void SetUp() {
+		gameManager = MainApp.Instance.game;
 	}
 
 	public override void OnNotify (string p_event, params object[] p_objects) {
-		
+		switch(p_event) {
+			case EventFlag.GameUI.SetUp :
+				SetUp( );
+			break;
+		}
 	}
 
 	public void EndTurnClick() {
@@ -36,7 +40,7 @@ public class GameUIManager : Observer{
 	}
 
 	public void ResumeClick() {
-		gameManager.inputManager.moveUnit.transform.position = gameManager.map.gridManager.originTile;
+		// gameManager.inputManager.moveUnit.transform.position = gameManager.map.gridManager.originTile;
 		gameManager.inputManager.moveUnit.status = Unit.Status.Idle;
 		gameManager.inputManager.FreePanel();
 	}

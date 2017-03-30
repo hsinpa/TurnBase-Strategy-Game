@@ -15,15 +15,43 @@ public class GameManager : Observer {
 	public User currentUser;
 	public GameUIManager uiManager;
 	public InputManager inputManager;
+	public CameraTransition mCamera { get { return transform.Find("camera").GetComponent<CameraTransition>(); }  }
+	public DatabaseManager database { get { return transform.Find("database").GetComponent<DatabaseManager>(); }  }
+	public GameStateManager gameState { get { return transform.GetComponent<GameStateManager>(); }  }
+
 	public GameUtility gameUtility;
+
+	private LevelPrefab mLevelPrefab;
+	public MapPrefab mMapPrefab;
+	private int mMapIndex;
 
 	public override void OnNotify (string p_event, params object[] p_objects) {
 		switch(p_event) {
-			case EventFlag.Game.EnterGame :
-				OnNotify(EventFlag.Game.GameStart);
+			case EventFlag.Game.SetUp :
+				mCamera.mode = CameraTransition.Mode.Show;
 
+				int testLevel = 1;
+				if (MainApp.Instance.stringTag.tagList.Count > 0) testLevel = int.Parse( MainApp.Instance.stringTag.tagList[0] );
+
+				LevelPrefab levelPrefab = database.FindLevel(testLevel);
+
+				SetUp( levelPrefab );
 			break;
 
+			case EventFlag.Game.EnterGame :
+
+				//Set Map information
+				mMapIndex = 0;
+				mMapPrefab = mLevelPrefab._mapList[mMapIndex];
+
+				round = 1;
+				AssignPlayer();
+				
+
+				map.LoadMap( mMapPrefab._id );
+
+				OnNotify(EventFlag.Game.GameStart);
+			break;
 
 			case EventFlag.Game.GameStart :
 				GameStart();
@@ -37,6 +65,18 @@ public class GameManager : Observer {
 				RoundEnd();
 			break;
 
+			case EventFlag.Game.NextMap :
+				mMapIndex++;
+				if ( mMapIndex >=  mLevelPrefab._mapList.Count) {
+					OnNotify(EventFlag.Game.GameEnd);
+					return;
+				} 
+				mMapPrefab = mLevelPrefab._mapList[mMapIndex];
+
+				ToNextMap(mMapPrefab);
+			break;
+
+
 			case EventFlag.Game.GameEnd :
 				GameOver();
 			break;
@@ -44,18 +84,19 @@ public class GameManager : Observer {
 	}
 
 	//Prepare anything prequisted ready
-	public void SetUp(MainApp p_main) {
+	public void SetUp(LevelPrefab p_levelPrefab) {
+		mLevelPrefab = p_levelPrefab;
 		map = transform.Find("map").GetComponent<Map>(); 
-		map.Load( Camera.main );
+		map.SetUp(  );
 
 		inputManager = transform.FindChild("user").GetComponent<InputManager>();
-		inputManager.SetUp(this, p_main.ui);
+		inputManager.SetUp(this, MainApp.Instance.ui);
 		
 		gameUtility = new GameUtility( this );
-		uiManager = p_main.ui;
+		uiManager = MainApp.Instance.ui;
 
 		//Enable UI Canvas
-		uiManager.GetComponent<Canvas>().enabled = true;
+		uiManager.GetComponent<Canvas>().enabled = true;		
 	}
 
 	public void AssignPlayer() {
@@ -65,6 +106,9 @@ public class GameManager : Observer {
 
 	public void LoadAllUnitToMap() {
 		map.ClearUnits();
+		player.allUnits.Clear();
+		enemy.allUnits.Clear();
+
 		GameObject prefab = Resources.Load<GameObject>("Prefab/Game/unit");
 		
 		//Manaully generate unit
@@ -80,18 +124,18 @@ public class GameManager : Observer {
 		}	
 	}
 
-	void GameStart() {
-		round = 1;
+	public void ToNextMap(MapPrefab p_mapPrefab) {
+		map.LoadMap( p_mapPrefab._id );
+		GameStart();
+	}
 
-		AssignPlayer();
+	void GameStart() {
 		LoadAllUnitToMap();
 
 		currentUser = users[0];
 
 		//Load Character here
 		//unitGenerator.GenerateUnitToPos();
-
-
 		RoundStart();
 	}
 

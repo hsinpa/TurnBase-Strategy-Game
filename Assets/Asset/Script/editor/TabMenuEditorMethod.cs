@@ -12,4 +12,13 @@ public class TabMenuEditorMethod {
         return asset;
     }
 
+	[MenuItem("Assets/Create/LevelList")]
+    public static LevelListPrefab  CreateLevelList() {
+		LevelListPrefab asset = ScriptableObject.CreateInstance<LevelListPrefab>();
+		AssetDatabase.CreateAsset(asset, "Assets/Asset/Prefab/Level/LevelList.asset");
+        AssetDatabase.SaveAssets();
+        return asset;
+    }
+
+
 }

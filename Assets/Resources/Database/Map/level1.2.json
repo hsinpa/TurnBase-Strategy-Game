@@ -1,18 +1,10 @@
 { "height":8,
  "layers":[
         {
-         "data":[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+         "data":[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 4, 2, 2, 2, 4, 2, 4, 4, 4, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2, 4, 4, 2, 2, 2, 2, 2, 4, 4, 2],
          "height":8,
          "name":"Base",
          "opacity":1,
-         "properties":
-            {
-             "cost":1
-            },
-         "propertytypes":
-            {
-             "cost":"int"
-            },
          "type":"tilelayer",
          "visible":true,
          "width":6,
@@ -20,56 +12,32 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-         "height":8,
-         "name":"Castle",
-         "opacity":1,
-         "properties":
-            {
-             "cost":0
-            },
-         "propertytypes":
-            {
-             "cost":"int"
-            },
-         "type":"tilelayer",
-         "visible":true,
-         "width":6,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "data":[14, 14, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 221, 221, 0, 0, 0, 0, 0, 0],
-         "height":8,
-         "name":"Obstacle",
-         "opacity":1,
-         "properties":
-            {
-             "cost":0
-            },
-         "propertytypes":
-            {
-             "cost":"int"
-            },
-         "type":"tilelayer",
-         "visible":true,
-         "width":6,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 92, 93, 94, 6, 6, 0, 99, 5, 101, 6, 0, 0, 106, 107, 108, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":8,
          "name":"Forest",
          "opacity":1,
-         "properties":
-            {
-             "cost":0
-            },
-         "propertytypes":
-            {
-             "cost":"int"
-            },
+         "type":"tilelayer",
+         "visible":true,
+         "width":6,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 218, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":8,
+         "name":"Obstacle",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":6,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":8,
+         "name":"Castle",
+         "opacity":1,
          "type":"tilelayer",
          "visible":true,
          "width":6,
@@ -83,7 +51,7 @@
          "objects":[
                 {
                  "height":16,
-                 "id":1,
+                 "id":13,
                  "name":"Player",
                  "properties":
                     {
@@ -102,8 +70,8 @@
                 }, 
                 {
                  "height":16,
-                 "id":2,
-                 "name":"Player",
+                 "id":14,
+                 "name":"Enemy",
                  "properties":
                     {
                      "class":"warrior"
@@ -116,12 +84,12 @@
                  "type":"Unit",
                  "visible":true,
                  "width":16,
-                 "x":48,
-                 "y":112
+                 "x":0,
+                 "y":0
                 }, 
                 {
                  "height":16,
-                 "id":3,
+                 "id":15,
                  "name":"Player",
                  "properties":
                     {
@@ -140,26 +108,7 @@
                 }, 
                 {
                  "height":16,
-                 "id":4,
-                 "name":"Player",
-                 "properties":
-                    {
-                     "class":"warrior"
-                    },
-                 "propertytypes":
-                    {
-                     "class":"string"
-                    },
-                 "rotation":0,
-                 "type":"Unit",
-                 "visible":true,
-                 "width":16,
-                 "x":32,
-                 "y":112
-                }, 
-                {
-                 "height":16,
-                 "id":5,
+                 "id":17,
                  "name":"Enemy",
                  "properties":
                     {
@@ -173,54 +122,39 @@
                  "type":"Unit",
                  "visible":true,
                  "width":16,
-                 "x":0,
-                 "y":32
+                 "x":80,
+                 "y":48
                 }, 
                 {
                  "height":16,
-                 "id":7,
+                 "id":18,
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"warrior"
+                     "spawn_period":1,
+                     "spawn_time":2,
+                     "spawn_unit":"-3"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "spawn_period":"int",
+                     "spawn_time":"int",
+                     "spawn_unit":"string"
                     },
                  "rotation":0,
-                 "type":"Unit",
-                 "visible":true,
-                 "width":16,
-                 "x":32,
-                 "y":0
-                }, 
-                {
-                 "height":16,
-                 "id":8,
-                 "name":"Enemy",
-                 "properties":
-                    {
-                     "class":"warrior"
-                    },
-                 "propertytypes":
-                    {
-                     "class":"string"
-                    },
-                 "rotation":0,
-                 "type":"Unit",
+                 "type":"SpawnPoint",
                  "visible":true,
                  "width":16,
                  "x":48,
-                 "y":0
+                 "y":16
                 }, 
                 {
                  "height":16,
-                 "id":9,
-                 "name":"Enemy",
+                 "id":19,
+                 "name":"Player",
                  "properties":
                     {
-                     "class":"archer"
+                     "class":"warrior"
                     },
                  "propertytypes":
                     {
@@ -230,16 +164,16 @@
                  "type":"Unit",
                  "visible":true,
                  "width":16,
-                 "x":32,
-                 "y":80
+                 "x":16,
+                 "y":112
                 }, 
                 {
                  "height":16,
-                 "id":10,
+                 "id":21,
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"archer"
+                     "class":"warrior"
                     },
                  "propertytypes":
                     {
@@ -250,53 +184,45 @@
                  "visible":true,
                  "width":16,
                  "x":80,
-                 "y":16
+                 "y":0
                 }, 
                 {
                  "height":16,
-                 "id":11,
-                 "name":"Enemy",
+                 "id":22,
+                 "name":"Player",
                  "properties":
                     {
-                     "spawn_period":1,
-                     "spawn_time":2,
-                     "spawn_unit":"-3"
+                     "class":"warrior"
                     },
                  "propertytypes":
                     {
-                     "spawn_period":"int",
-                     "spawn_time":"int",
-                     "spawn_unit":"string"
+                     "class":"string"
                     },
                  "rotation":0,
-                 "type":"SpawnPoint",
+                 "type":"Unit",
                  "visible":true,
                  "width":16,
-                 "x":64,
-                 "y":16
+                 "x":0,
+                 "y":112
                 }, 
                 {
                  "height":16,
-                 "id":12,
+                 "id":23,
                  "name":"Enemy",
                  "properties":
                     {
-                     "spawn_period":1,
-                     "spawn_time":2,
-                     "spawn_unit":"-3"
+                     "class":"archer"
                     },
                  "propertytypes":
                     {
-                     "spawn_period":"int",
-                     "spawn_time":"int",
-                     "spawn_unit":"string"
+                     "class":"string"
                     },
                  "rotation":0,
-                 "type":"SpawnPoint",
+                 "type":"Unit",
                  "visible":true,
                  "width":16,
-                 "x":16,
-                 "y":16
+                 "x":0,
+                 "y":32
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -305,16 +231,8 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":13,
+ "nextobjectid":24,
  "orientation":"orthogonal",
- "properties":
-    {
-     "cost":0
-    },
- "propertytypes":
-    {
-     "cost":"int"
-    },
  "renderorder":"left-up",
  "tileheight":16,
  "tilesets":[

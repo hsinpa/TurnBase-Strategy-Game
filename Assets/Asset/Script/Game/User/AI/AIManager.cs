@@ -9,9 +9,11 @@ namespace Player {
 		public IEnumerator Think() {
 			CameraCtrl camera = Camera.main.GetComponent<CameraCtrl>();
 				foreach (Unit unit in allUnits) {
+					
+					//If player has no minion anymore
 					if (gm.player.allUnits.Count <= 0) break;
 
-					camera.StartFollowing(unit);
+					//camera.StartFollowing(unit);
 					GridHolder bestMoveToGrid = mAIPattern.FindBestAttackRoute(unit);
 
 					//Move
@@ -20,7 +22,7 @@ namespace Player {
 			        //React
 					yield return StartCoroutine(PerformAction( unit ));
 
-					camera.StopFollowing();
+					//camera.StopFollowing();
 					gm.map.gridManager.ResetGrid(gm.map.grids);
 				}
 			gm.EndTurn();
@@ -53,7 +55,7 @@ namespace Player {
 		}
 
 		public override void EndTurn () {
-			
+			gm.gameState.VerifyGameState();
 		}
 	}
 }

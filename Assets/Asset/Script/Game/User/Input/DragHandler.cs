@@ -12,7 +12,7 @@ public class DragHandler : MonoBehaviour {
 
 	//Distinguish between click and drag
     protected float mouseClickDistance = 0;
-    protected float isDragDistance = 0.1f;
+    protected float isDragDistance = 0.05f;
 
     protected Vector3 startClickPoint;
 
