@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class MapPrefab : ScriptableObject {
+public class MapPrefab : ScriptablePrefab {
 
 	//General
-	public string _id;
 	public EventFlag.WinCondition _winCondition;
 }

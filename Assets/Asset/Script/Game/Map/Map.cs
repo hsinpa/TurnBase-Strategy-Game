@@ -29,6 +29,7 @@ public class Map : MonoBehaviour {
 
 	public void LoadMap(string p_mapname ) {
 		TextAsset bindata= Resources.Load("Database/Map/"+p_mapname) as TextAsset;
+
 		mapJson = new JSONObject(bindata.ToString());
 		height = (int)mapJson.GetField("height").n;
 		width = (int)mapJson.GetField("width").n;
@@ -37,11 +38,11 @@ public class Map : MonoBehaviour {
 	}
 
 	public GameObject PrepareHolderObject() {
-		if ( transform.FindChild("tiles") != null ) {
+		if ( transform.Find("tiles") != null ) {
 			if (Application.isEditor) {
-				GameObject.DestroyImmediate( transform.FindChild("tiles").gameObject );			
+				GameObject.DestroyImmediate( transform.Find("tiles").gameObject );			
 			} else {
-				GameObject.Destroy( transform.FindChild("tiles").gameObject );			
+				GameObject.Destroy( transform.Find("tiles").gameObject );			
 			}
 		}
 		GameObject gameBoard = new GameObject("tiles");
@@ -129,7 +130,7 @@ public class Map : MonoBehaviour {
 
 			// masterSprite.sprite = Resources.Load<Sprite>("white");
 		} else {
-			mapMaster = gameBoard.transform.FindChild(pos.ToString()).gameObject;
+			mapMaster = gameBoard.transform.Find(pos.ToString()).gameObject;
 		}
 
 		List<JSONObject> json = layer.GetField("data").list;
@@ -147,13 +148,12 @@ public class Map : MonoBehaviour {
 	}
 
 
-	public Unit GenerateUnitToPos(User p_user, GameObject prefab, UnitPlacementComponent p_placement) {
-		string unitClass = p_placement.propertyJSON.GetField("class").str;
-
+	public Unit GenerateUnitToPos(GameObject prefab, UnitPlacementComponent p_placement,  CharacterPrefab characterPrefab) {
+		//Set sprite
 		Sprite sprite = UtilityMethod.LoadSpriteFromMulti( Resources.LoadAll<Sprite>("characters"), 
-							p_placement.userType.ToString("g").ToLower() + "_"+ unitClass);
+							p_placement.userType.ToString("g").ToLower() + "_"+ characterPrefab._class.ToLower());
 		
-		Transform unitHolder = transform.FindChild("units");
+		Transform unitHolder = transform.Find("units");
 		GameObject item = GameObject.Instantiate(prefab);
 		Unit unit = item.GetComponent<Unit>();
 
@@ -171,8 +171,9 @@ public class Map : MonoBehaviour {
 		Vector3 scaleVector = UtilityMethod.ScaleToWorldSize( bounds.size, 1 );
 		unitRenderer.transform.localScale = scaleVector;
 
-		unit.Set(p_user, unitClass);
-		p_user.allUnits.Add( unit );
+		
+		// unit.Set(p_user, characterPrefab._class.ToLower(), characterPrefab, new JSONObject());
+		// p_user.allUnits.Add( unit );
 		return unit;
 	}
 
@@ -192,7 +193,7 @@ public class Map : MonoBehaviour {
 	}
 
 	public void ClearUnits() {
-		Transform unitHolder = transform.FindChild("units");
+		Transform unitHolder = transform.Find("units");
 		UtilityMethod.ClearChildObject( unitHolder );
 	}
 

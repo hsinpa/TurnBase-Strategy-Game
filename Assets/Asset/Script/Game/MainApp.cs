@@ -6,18 +6,21 @@ public class MainApp : Singleton<MainApp> {
 	protected MainApp () {} // guarantee this will be always a singleton only - can't use the constructor!
 	public StringTag stringTag;
 
-	public GameManager game { get { return transform.FindChild("game").GetComponent<GameManager>(); } }
-	public GameUIManager ui { get { return transform.FindChild("ui").GetComponent<GameUIManager>(); } }
-	public MenuManager menu { get { return transform.FindChild("ui").GetComponent<MenuManager>(); } }
+	public GameManager game { get { return transform.Find("game").GetComponent<GameManager>(); } }
+	public GameUIManager ui { get { return transform.Find("ui").GetComponent<GameUIManager>(); } }
+	public MenuManager menu { get { return transform.Find("ui").GetComponent<MenuManager>(); } }
 
-	public SceneCtrl sceneCtrl { get { return transform.FindChild("utility").GetComponent<SceneCtrl>(); } }
+	public SceneCtrl sceneCtrl { get { return transform.Find("utility").GetComponent<SceneCtrl>(); } }
 
 	public Subject subject;
-
 
 	void Awake() {
 		stringTag = CreateSceneInfo();
 
+		
+		game.save.SetUp();
+
+		//Set up event notificaiton
 		subject = new Subject();
 
 		subject.addObserver(game);
@@ -42,7 +45,6 @@ public class MainApp : Singleton<MainApp> {
 		}
 
 		StringTag tag = sceneInfoObject.GetComponent<StringTag>();
-
 
 		DontDestroyOnLoad(sceneInfoObject);
 		return tag;

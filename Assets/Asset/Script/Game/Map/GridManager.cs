@@ -30,6 +30,7 @@ public class GridManager : MonoBehaviour {
 	public void ResetGrid(List<GridHolder> nodes) {
 		nodes.ForEach(delegate(GridHolder obj) {
 			obj.gridStatus = GridHolder.Status.Idle;
+			obj.attackPosList.Clear();
 		});
 	}
 
@@ -51,7 +52,7 @@ public class GridManager : MonoBehaviour {
 		lineRenderer.startColor = GeneralSetting.shallow_yellow;
 		lineRenderer.endColor = GeneralSetting.dark_yellow;
 
-		lineRenderer.numPositions = pathList.Count;
+		lineRenderer.positionCount = pathList.Count;
 		for (int i = 0; i < pathList.Count; i++) {
 			lineRenderer.SetPosition (i, pathList[i]);
 		}
@@ -76,6 +77,18 @@ public class GridManager : MonoBehaviour {
 		foreach (GridHolder k in p_grid) {
 			k.gridStatus = GridHolder.Status.Attack;
 		}
+	}
+
+	public Vector2 FindBestAttackPos( Vector2 default_pos, List<Vector2> p_attackPos, List<Tile> p_recordTile ) {
+            Vector2 bestStandPoint = default_pos;
+            //Pick the nearest attackpoint, unit stand before
+            for (int i = p_attackPos.Count - 1; i >= 0; i--) {
+                  if (p_recordTile.Count(x=>x.position == p_attackPos[i]) > 0 ) {
+                        bestStandPoint = p_recordTile.Find(x=>x.position == p_attackPos[i]).position;
+                        break;
+                }
+            }
+		return bestStandPoint;
 	}
 
 }

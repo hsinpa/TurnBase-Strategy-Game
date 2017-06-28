@@ -87,11 +87,11 @@
                  "name":"Player",
                  "properties":
                     {
-                     "class":"archer"
+                     "id":"character.3"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -106,11 +106,11 @@
                  "name":"Player",
                  "properties":
                     {
-                     "class":"warrior"
+                     "id":"character.1"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -125,11 +125,11 @@
                  "name":"Player",
                  "properties":
                     {
-                     "class":"archer"
+                     "id":"character.2"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -144,11 +144,11 @@
                  "name":"Player",
                  "properties":
                     {
-                     "class":"warrior"
+                     "id":"character.2"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -163,11 +163,11 @@
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"troop"
+                     "id":"enemy.3"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -182,11 +182,11 @@
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"warrior"
+                     "id":"enemy.1"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -201,11 +201,11 @@
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"warrior"
+                     "id":"enemy.1"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -220,11 +220,11 @@
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"archer"
+                     "id":"enemy.1"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",
@@ -239,11 +239,11 @@
                  "name":"Enemy",
                  "properties":
                     {
-                     "class":"archer"
+                     "id":"enemy.2"
                     },
                  "propertytypes":
                     {
-                     "class":"string"
+                     "id":"string"
                     },
                  "rotation":0,
                  "type":"Unit",

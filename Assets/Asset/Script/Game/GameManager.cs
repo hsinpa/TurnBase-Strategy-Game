@@ -17,11 +17,14 @@ public class GameManager : Observer {
 	public InputManager inputManager;
 	public CameraTransition mCamera { get { return transform.Find("camera").GetComponent<CameraTransition>(); }  }
 	public DatabaseManager database { get { return transform.Find("database").GetComponent<DatabaseManager>(); }  }
+	public SaveManager save { get { return transform.Find("database").GetComponent<SaveManager>(); }  }
+	public MechanismContainer mechanism { get { return transform.Find("mechanism").GetComponent<MechanismContainer>(); }  }
+
 	public GameStateManager gameState { get { return transform.GetComponent<GameStateManager>(); }  }
 
 	public GameUtility gameUtility;
 
-	private LevelPrefab mLevelPrefab;
+	public LevelPrefab mLevelPrefab;
 	public MapPrefab mMapPrefab;
 	private int mMapIndex;
 
@@ -33,15 +36,16 @@ public class GameManager : Observer {
 				int testLevel = 1;
 				if (MainApp.Instance.stringTag.tagList.Count > 0) testLevel = int.Parse( MainApp.Instance.stringTag.tagList[0] );
 
-				LevelPrefab levelPrefab = database.FindLevel(testLevel);
-
-				SetUp( levelPrefab );
+				List<LevelPrefab> levelPrefab = database.FindAllByType<LevelPrefab>();
+				
+				SetUp( levelPrefab.Find(x=>x._level == testLevel) );
 			break;
 
 			case EventFlag.Game.EnterGame :
 
 				//Set Map information
 				mMapIndex = 0;
+				Debug.Log(mLevelPrefab.name);
 				mMapPrefab = mLevelPrefab._mapList[mMapIndex];
 
 				round = 1;
@@ -89,7 +93,7 @@ public class GameManager : Observer {
 		map = transform.Find("map").GetComponent<Map>(); 
 		map.SetUp(  );
 
-		inputManager = transform.FindChild("user").GetComponent<InputManager>();
+		inputManager = transform.Find("user").GetComponent<InputManager>();
 		inputManager.SetUp(this, MainApp.Instance.ui);
 		
 		gameUtility = new GameUtility( this );
@@ -113,15 +117,11 @@ public class GameManager : Observer {
 		
 		//Manaully generate unit
 		List<UnitPlacementComponent> playerPlacement = map.placements.FindAll(x=>x.userType == EventFlag.UserType.Player && x.placementType == EventFlag.PlacementType.Unit);
-		foreach (UnitPlacementComponent p in playerPlacement) {
-			map.GenerateUnitToPos(player, prefab, p);
-		}
+		player.GenerateCharacters( playerPlacement );
 
 		//Enemy unit
 		List<UnitPlacementComponent> enemyPlacement = map.placements.FindAll(x=>x.userType == EventFlag.UserType.Enemy && x.placementType == EventFlag.PlacementType.Unit);
-		foreach (UnitPlacementComponent p in enemyPlacement) {
-			map.GenerateUnitToPos(enemy, prefab, p);
-		}	
+		enemy.GenerateCharacters( enemyPlacement );
 	}
 
 	public void ToNextMap(MapPrefab p_mapPrefab) {
@@ -131,6 +131,7 @@ public class GameManager : Observer {
 
 	void GameStart() {
 		LoadAllUnitToMap();
+		uiManager.topInfoView.Close();
 
 		currentUser = users[0];
 
@@ -160,6 +161,8 @@ public class GameManager : Observer {
 			currentUser = users[index+1];
 			currentUser.StartTurn();
 		}
+
+		uiManager.topInfoView.Close();
 	}
 
 	public void GameOver() {

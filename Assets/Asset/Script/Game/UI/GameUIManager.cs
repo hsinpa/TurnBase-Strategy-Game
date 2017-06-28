@@ -7,6 +7,8 @@ public class GameUIManager : Observer{
 	GameManager gameManager;
 	public Animator actionMenu { get { return transform.Find("ActionMenu").GetComponent<Animator>(); } }
 
+	public TopInfoView topInfoView { get { return transform.Find("infotab_top").GetComponent<TopInfoView>(); } }
+
 	public void SetUp() {
 		gameManager = MainApp.Instance.game;
 	}

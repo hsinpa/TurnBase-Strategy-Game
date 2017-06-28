@@ -43,7 +43,20 @@ namespace Player {
 
 
 
-		//====================================   Geneneral Config   ====================================
+		//====================================   Geneneral Config   ===================================='
+		public override JSONObject GetCharacter( CharacterPrefab p_character) {
+			// MainApp.Instance.game.mechanism.
+			int level = gm.mLevelPrefab._average_enemy_level,
+				minLevel = Mathf.Clamp(level - gm.mLevelPrefab._level_range, 0, level),
+				maxLevel = Mathf.Clamp(level + gm.mLevelPrefab._level_range, 0, 50),
+				levelRange = Random.Range( minLevel, maxLevel );
+
+			JSONObject characterJSON = gm.mechanism.characterManager.GetCharacterJSON( p_character, false );
+			characterJSON = gm.mechanism.characterManager.LevelUp(p_character, characterJSON,levelRange);
+			
+			return characterJSON;
+		}
+
 		public override void PreLoad (GameManager p_gManager, EventFlag.UserType p_uType) {
 			base.PreLoad (p_gManager, p_uType);
 			mAIPattern = new AIPattern(p_gManager);

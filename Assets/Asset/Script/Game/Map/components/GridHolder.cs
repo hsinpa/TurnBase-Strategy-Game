@@ -38,6 +38,7 @@ public class GridHolder : MonoBehaviour {
 	public float costSoFar = 0;
 
 	public Vector2 attackPos;
+	public List<Vector2> attackPosList = new List<Vector2>();
 
 	//AI Setting
 	[HideInInspector]

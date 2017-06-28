@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using Player;
 using Utility;
 using DG.Tweening;
+using UnityEngine.UI;
 using System.Threading;
 
 [System.Serializable]
 public class Unit : MonoBehaviour {
 	private User parent;
+
+	public CharacterPrefab mCharacterPrefab;
+	public JSONObject characterJSON;
 
 	public bool cameraFollowSwitch = false;
 	public string guid;
@@ -21,12 +25,12 @@ public class Unit : MonoBehaviour {
 			if (value <= 0 ) {
 				Dead();
 			}
+			transform.Find("ui/hud/hp").GetComponent<Text>().text = value.ToString();
+
 			mHP = value;
 		}
 	}
 	private int mHP = 10;
-
-
 
 	public int speed = 2;
 	public int defense = 2;
@@ -74,12 +78,19 @@ public class Unit : MonoBehaviour {
 	public List<Weapon> weaponSets = new List<Weapon>();
 
 
-	public void Set(User p_user, string p_class) {
+	public void Set(User p_user, string p_class, CharacterPrefab p_characterPrefab, JSONObject p_characterJSON) {
 		parent = p_user;
 		addTestWeapon(p_class);
 		guid = System.Guid.NewGuid().ToString();
 
+		mCharacterPrefab = p_characterPrefab;
+		characterJSON = p_characterJSON;
+
 		transform.name = guid;
+
+		//Set hp
+		Debug.Log(p_characterJSON.ToString());
+		hp =  p_characterJSON.GetField("hp").num;
 	}
 
 

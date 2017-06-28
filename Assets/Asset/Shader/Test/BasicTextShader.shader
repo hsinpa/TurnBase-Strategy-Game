@@ -1,4 +1,6 @@
-﻿Shader "Customize/BasicText"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Customize/BasicText"
 {
 	Properties
 	{
@@ -82,7 +84,7 @@
 			{
 				v2f OUT;
 				OUT.worldPosition = IN.vertex;
-				OUT.vertex = mul(UNITY_MATRIX_MVP, OUT.worldPosition);
+				OUT.vertex = UnityObjectToClipPos(OUT.worldPosition);
 
 				OUT.texcoord = IN.texcoord;
 				

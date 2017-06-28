@@ -14,6 +14,27 @@ namespace Player {
 			userType = p_uType;
 		}
 
+
+		public virtual void GenerateCharacters( List<UnitPlacementComponent> placements ) {
+			GameObject prefab = Resources.Load<GameObject>("Prefab/Game/unit");
+
+			foreach (UnitPlacementComponent p in placements) {
+				string unitID = p.propertyJSON.GetField("id").str;
+				CharacterPrefab characterPrefab = gm.database.FindByID<CharacterPrefab>(unitID);
+				JSONObject characterJSON = GetCharacter( characterPrefab );
+
+				Unit unit = gm.map.GenerateUnitToPos(prefab, p, characterPrefab);
+
+				unit.Set(this, characterPrefab._class.ToLower(), characterPrefab,  characterJSON );
+				allUnits.Add( unit );
+
+			}
+		}
+
+		public virtual JSONObject GetCharacter( CharacterPrefab p_character) {
+			return gm.mechanism.characterManager.GetCharacterJSON(p_character, true);
+		}
+
 		public virtual void StartTurn() {
 			foreach (Unit unit in allUnits ) {
 				unit.status = Unit.Status.Idle;

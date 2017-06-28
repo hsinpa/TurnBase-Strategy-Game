@@ -40,8 +40,6 @@ public class MTDatabaseContext : Object
 		      string s = myReader.ReadToEnd ();
 		      myReader.Close();//Close the reader and underlying stream
 
-
-
 			File.WriteAllText(path + "/" + firstItem.Key + ".csv", s);
 			url_clone.Remove(firstItem.Key);
 			UnityDownloadGoogleSheet(url_clone);
@@ -68,72 +66,121 @@ public class MTDatabaseContext : Object
 			{ "srpg - attribute", Regex.Replace( url, ":id", "0")},
 			{ "srpg - level", Regex.Replace( url, ":id", "937201795")},
 			{ "srpg - map", Regex.Replace( url, ":id", "2128930390")},
+			{ "srpg - character", Regex.Replace( url, ":id", "1905783139")},
 		} );
     }
 
+
+	static ScriptableListPrefab mLevelInventory;
     [MenuItem("Assets/SRPG/Database/GeneratePrefab", false, 0)]
     static public void GeneratePrefab() {
+		mLevelInventory = (ScriptableListPrefab)AssetDatabase.LoadAssetAtPath(PREFAB_FOLDER+"/PrefabList.asset", typeof(ScriptableListPrefab));
+
+        FileUtil.DeleteFileOrDirectory(PREFAB_FOLDER+"/Objects");
+        AssetDatabase.CreateFolder(PREFAB_FOLDER, "Objects");
+		mLevelInventory.prefabList.Clear();
+
+		CreateMap();
 		CreateLevel();
+		CreateCharacter();
 
-    }
-
-    static public void CreateLevel() {
-		CSVFile csvFile = new CSVFile( Resources.Load<TextAsset>("Database/srpg - level").text );
-
-		MapPrefab[] mapPrefabs = AssetDatabase.LoadAllAssetsAtPath(PREFAB_FOLDER+"/Map/").OfType<MapPrefab>().ToArray();
-		LevelPrefab[] levelPrefabs = AssetDatabase.LoadAllAssetsAtPath(PREFAB_FOLDER+"/Level/").OfType<LevelPrefab>().ToArray();
-		
-		LevelListPrefab mLevelInventory = (LevelListPrefab)AssetDatabase.LoadAssetAtPath(PREFAB_FOLDER+"/Level/LevelList.asset", typeof(LevelListPrefab));
-
-		//Delete every previous prefab
-		foreach (LevelPrefab p_level in mLevelInventory.levelList) {
-			DeletePrefab<MapPrefab>(p_level._mapList);
-		}
-		DeletePrefab<LevelPrefab>(mLevelInventory.levelList);
-		mLevelInventory.levelList.Clear();
-
-
-		for(int i = 0; i < csvFile.length; i++) {
-			int level = csvFile.Get<int>(i, "Level");
-			LevelPrefab c_prefab = ScriptableObjectUtility.CreateAsset<LevelPrefab>(PREFAB_FOLDER+"/Level/", "level-"+level);
-
-			c_prefab._level = level;
-			c_prefab._mapList = CreateMap( level );
-
-
-			mLevelInventory.levelList.Add( c_prefab );
-			
-			EditorUtility.SetDirty(c_prefab);
-		}
 		EditorUtility.SetDirty(mLevelInventory);
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
     }
 
-	static public List<MapPrefab> CreateMap(int p_level) {
-		List<MapPrefab> mapPrefabs= new List<MapPrefab>();
+    static public void CreateLevel() {
+		CSVFile csvFile = new CSVFile( Resources.Load<TextAsset>("Database/srpg - level").text );		
+
+		for(int i = 0; i < csvFile.length; i++) {
+			int level = csvFile.Get<int>(i, "Level"),
+				mapNum = csvFile.Get<int>(i, "Map number"),
+				levelAverage = csvFile.Get<int>(i, "Average Level"),
+				levelRange = csvFile.Get<int>(i, "Level Range");
+			string id = csvFile.Get<string>(i, "ID");
+			LevelPrefab c_prefab = ScriptableObjectUtility.CreateAsset<LevelPrefab>(PREFAB_FOLDER+"/Objects/", "level-"+level);
+			EditorUtility.SetDirty(c_prefab);
+
+			c_prefab._level = level;
+			c_prefab._id = id;
+			c_prefab._average_enemy_level = levelAverage;
+			c_prefab._level_range = levelRange;
+
+
+			for (int m = 1; m <= mapNum; m++) {
+				Debug.Log(level+"."+m);
+
+				MapPrefab mapPrefab  = (MapPrefab) mLevelInventory.prefabList.Find( x=>x._id == id+"."+m );
+				Debug.Log(mapPrefab.name);
+				c_prefab._mapList.Add(mapPrefab );
+				
+			}
+
+			mLevelInventory.prefabList.Add( c_prefab );
+			
+		}
+    }
+
+	static public void CreateMap() {
 		CSVFile mapFile = new CSVFile( Resources.Load<TextAsset>("Database/srpg - map").text );
 
 		for(int i = 0; i < mapFile.length; i++) {
-			string levelID = mapFile.Get<string>(i, "ID");
+			string id = mapFile.Get<string>(i, "ID");
 			EventFlag.WinCondition winCondition = (EventFlag.WinCondition) mapFile.Get<int>(i, "Win Condition");
-			string[] levelSplit = levelID.Split('.');
 
-			if (levelSplit[0].Equals ("level"+p_level)) {
-				MapPrefab prefab = ScriptableObjectUtility.CreateAsset<MapPrefab>(PREFAB_FOLDER+"/Map/", "mapPrefab-"+p_level+"-"+i);
-				EditorUtility.SetDirty(prefab);
+			MapPrefab prefab = ScriptableObjectUtility.CreateAsset<MapPrefab>(PREFAB_FOLDER+"/Objects/", "mapPrefab-"+id);
+			EditorUtility.SetDirty(prefab);
 
-				prefab._winCondition = winCondition;
-				prefab._id = levelID;
+			prefab._winCondition = winCondition;
+			prefab._id = id;
 
-				mapPrefabs.Add(prefab);
-			}
+			mLevelInventory.prefabList.Add(prefab);
 		}
-
-		return mapPrefabs;
     }
 
-	static public void DeletePrefab<T>(List<T> p_list) where T : ScriptableObject {
+	static public void CreateCharacter() {
+		CSVFile csvFile = new CSVFile( Resources.Load<TextAsset>("Database/srpg - character").text );
+
+		for(int i = 0; i < csvFile.length; i++) {
+			string id = csvFile.Get<string>(i, "ID");
+			if (id == "") continue;
+
+			CharacterPrefab prefab = ScriptableObjectUtility.CreateAsset<CharacterPrefab>(PREFAB_FOLDER+"/Objects/", "character-"+id);
+			EditorUtility.SetDirty(prefab);
+
+			string[] strength = csvFile.Get<string>(i, "Strength").Split('&'),
+					defense = csvFile.Get<string>(i, "Defense").Split('&'),
+					speed = csvFile.Get<string>(i, "Speed").Split('&'),
+					skill = csvFile.Get<string>(i, "Skill").Split('&'),
+					footSpeed = csvFile.Get<string>(i, "Foot Speed").Split('&'),
+					hp = csvFile.Get<string>(i, "HP").Split('&');
+
+			
+			prefab._id = id;
+			prefab._name = csvFile.Get<string>(i, "Name");
+			prefab._class = csvFile.Get<string>(i, "Class");
+			prefab._strength = int.Parse( strength[0] );
+			prefab._defense = int.Parse(defense[0]);
+			prefab._speed =  int.Parse( speed[0] );
+			prefab._skill = int.Parse( skill[0] );
+			prefab._footspeed = int.Parse( footSpeed[0] );
+			prefab._hp = int.Parse( hp[0] );
+
+			prefab._character_growth_rate = csvFile.Get<float>(i, "Growth Rate");
+			prefab._strength_growth_rate = float.Parse( strength[1] );
+			prefab._defense_growth_rate = float.Parse( defense[1] );
+			prefab._speed_growth_rate = float.Parse( speed[1] );
+			prefab._skill_growth_rate = float.Parse( skill[1] );
+			prefab._footspeed_growth_rate = float.Parse( footSpeed[1] );
+			prefab._hp_growth_rate = float.Parse( hp[1] );
+
+			mLevelInventory.prefabList.Add(prefab);
+		}
+    }
+
+
+
+	static public void DeletePrefab<T>(List<T> p_list) where T : ScriptablePrefab {
 		foreach (T p in p_list) {
 			string pathToDelete = AssetDatabase.GetAssetPath(p);      
 			AssetDatabase.DeleteAsset(pathToDelete);

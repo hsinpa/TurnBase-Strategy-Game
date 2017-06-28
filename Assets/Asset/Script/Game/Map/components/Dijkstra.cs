@@ -90,14 +90,18 @@ namespace PathSolution {
 
 				//Check findNode and attackNodeStorage won't repeat
 				if (p_originalGrid.Count(x=> x.gridPosition == point) <= 0 && 
-					AttackGrid.Count(x=> x.gridPosition == point) <= 0 &&
+					// AttackGrid.Count(x=> x.gridPosition == point) <= 0 &&
 					//Unit overlap
 					(collides == null || collides.transform.position == p_unit.transform.position ) &&
 					//Grid Valid
 					mMap.grids.Contains( refilterN )) {
 
-					refilterN.attackPos = grid.gridPosition;
-					AttackGrid.Add( refilterN );
+						refilterN.attackPosList.Add( grid.gridPosition );
+
+						if (AttackGrid.Count(x=> x.gridPosition == point) <= 0) {
+							refilterN.attackPos = grid.gridPosition;
+							AttackGrid.Add( refilterN );
+						}
 							
 				}
 

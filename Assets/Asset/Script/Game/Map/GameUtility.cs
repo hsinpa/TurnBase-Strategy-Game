@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Player;
+using Utility;
 
 public class GameUtility {
 	GameManager gameManager;

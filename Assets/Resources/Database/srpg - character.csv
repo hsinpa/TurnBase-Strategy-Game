@@ -1,0 +1,8 @@
+ID,Growth Rate,Name,Class,HP,Strength,Defense,Speed,Skill,Foot Speed,Sprite
+character.1,1,Harry,Warrior,20&0.8,15&0.7,15&0.7,15&0.7,15&0.7,15&0.7,
+character.2,1,SPEND,Troop,20&0.8,13&0.7,15&0.7,11&0.7,15&0.7,15&0.7,
+character.3,0.7,OUTOR,Archer,20&0.8,15&0.7,15&0.7,15&0.7,15&0.7,15&0.7,
+,,,,,,,,,,
+enemy.1,0.8,Knight,Warrior,20&0.8,15&0.7,15&0.7,15&0.7,15&0.7,15&0.7,
+enemy.2,1.2,SPEND,Troop,20&0.8,15&0.7,15&0.7,15&0.7,15&0.7,15&0.7,
+enemy.3,0.8,OUTOR,Archer,20&0.8,15&0.7,15&0.7,15&0.7,15&0.7,15&0.7,

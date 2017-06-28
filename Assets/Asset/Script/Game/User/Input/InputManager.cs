@@ -18,7 +18,7 @@ public class InputManager :  DragHandler
     //Current during dragging event
     private GridHolder currentHolder;
 
-    User player { get { return transform.FindChild("player").GetComponent<User>(); } }
+    User player { get { return transform.Find("player").GetComponent<User>(); } }
 
     // Use this for initialization
     public void SetUp(GameManager p_gamemanager, GameUIManager p_gameUI)
@@ -144,6 +144,11 @@ public class InputManager :  DragHandler
             //Call Draging function
             base.OnUpdate();
         }
+
+
+		//Mouse CLick
+
+
     }
 
     //Get all Terrain / Unit from this method, except the current unit you are selecting
@@ -166,18 +171,29 @@ public class InputManager :  DragHandler
     }
 
 
+    public void OnCharacterClick( Unit p_unit ) {
+
+    }
+
     //=========================================== Drag and Drop ======================================
     public override void OnDragBegin(GameObject p_gameobject) {
         if (p_gameobject == null) return;
+        Unit selectedUnit = p_gameobject.GetComponent<Unit>();
 
         //Check if the unit is available (Player and idle)
         if (p_gameobject.tag == "Player" && p_gameobject.GetComponent<Unit>().status == Unit.Status.Idle)
         {
             base.OnDragBegin(p_gameobject);
 
-            moveUnit = p_gameobject.GetComponent<Unit>();
+            moveUnit = selectedUnit;
 		    DisplayRoute(moveUnit);
+
         }
+
+        //Show information about the selected object
+        if (gameUI.topInfoView.currentUnit != selectedUnit) {
+          gameUI.topInfoView.SetCharacterInfo( selectedUnit );
+        }        
     }
 
     public override void OnDrag(Vector3 p_mousePosition) {
@@ -206,7 +222,6 @@ public class InputManager :  DragHandler
 
         if (mCollide.tag == "Ground" && mCollide.GetComponent<GridHolder>().gridStatus == GridHolder.Status.Move)
         {
-            Debug.Log("Is Ground");
 
             if ( recordTile.Count == 0) {
                 ResumeUnit(moveUnit);
@@ -222,7 +237,18 @@ public class InputManager :  DragHandler
 
             Unit target = mCollide.GetComponent<Unit>();
             GridHolder gridHolder = _Map.FindTileByPos(target.unitPos);
-            List<Tile> tiles = FindPath(moveUnit.unitPos, gridHolder.attackPos);
+            Debug.Log( gridHolder.attackPosList.Count );
+            
+            Vector2 bestStandPoint = _Map.gridManager.FindBestAttackPos(gridHolder.attackPos, gridHolder.attackPosList, recordTile );
+            // //Pick the nearest attackpoint, unit stand before
+            // for (int i = gridHolder.attackPosList.Count - 1; i >= 0; i--) {
+            //       if (recordTile.Count(x=>x.position == gridHolder.attackPosList[i]) > 0 ) {
+            //             bestStandPoint = recordTile.Find(x=>x.position == gridHolder.attackPosList[i]).position;
+            //             break;
+            //     }
+            // }
+
+            List<Tile> tiles = FindPath(moveUnit.unitPos, bestStandPoint);
             
             moveUnit.Attack(target, gridHolder);
 
